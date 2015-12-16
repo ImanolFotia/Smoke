@@ -507,7 +507,7 @@
           <Property Name="usu_Admin" Nullable="false" Type="Boolean" />
           <NavigationProperty Name="AuditoriaLogins" Relationship="Model1.UsuariosAuditoriaLogin" FromRole="Usuarios" ToRole="AuditoriaLogin" />
           <Property Name="Credito" Nullable="false" Type="Decimal" DefaultValue="0" />
-          <Property Type="Int32" Name="Id2" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id2" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
         </EntityType>
         <EntityType Name="Pagos">
           <Key>
