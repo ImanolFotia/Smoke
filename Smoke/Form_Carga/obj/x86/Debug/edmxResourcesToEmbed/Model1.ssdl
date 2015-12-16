@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SmokeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="SmokeModelStoreContainer">
+    <EntitySet Name="Formularios" EntityType="SmokeModel.Store.Formularios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Grupos" EntityType="SmokeModel.Store.Grupos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Modulos" EntityType="SmokeModel.Store.Modulos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pagos" EntityType="SmokeModel.Store.Pagos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Perfiles" EntityType="SmokeModel.Store.Perfiles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Permisos" EntityType="SmokeModel.Store.Permisos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Softwares" EntityType="SmokeModel.Store.Softwares" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuarios" EntityType="SmokeModel.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuarios_Developer" EntityType="SmokeModel.Store.Usuarios_Developer" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_FormulariosPerfiles" Association="SmokeModel.Store.FK_FormulariosPerfiles">
+      <End Role="Formularios" EntitySet="Formularios" />
+      <End Role="Perfiles" EntitySet="Perfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GruposPerfiles" Association="SmokeModel.Store.FK_GruposPerfiles">
+      <End Role="Grupos" EntitySet="Grupos" />
+      <End Role="Perfiles" EntitySet="Perfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModulosFormularios" Association="SmokeModel.Store.FK_ModulosFormularios">
+      <End Role="Modulos" EntitySet="Modulos" />
+      <End Role="Formularios" EntitySet="Formularios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PerfilesPermisos" Association="SmokeModel.Store.FK_PerfilesPermisos">
+      <End Role="Perfiles" EntitySet="Perfiles" />
+      <End Role="Permisos" EntitySet="Permisos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PermisosFormularios" Association="SmokeModel.Store.FK_PermisosFormularios">
+      <End Role="Permisos" EntitySet="Permisos" />
+      <End Role="Formularios" EntitySet="Formularios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_DeveloperPagos" Association="SmokeModel.Store.FK_Usuario_DeveloperPagos">
+      <End Role="Usuarios_Developer" EntitySet="Usuarios_Developer" />
+      <End Role="Pagos" EntitySet="Pagos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_DeveloperSoftware" Association="SmokeModel.Store.FK_Usuario_DeveloperSoftware">
+      <End Role="Usuarios_Developer" EntitySet="Usuarios_Developer" />
+      <End Role="Softwares" EntitySet="Softwares" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosUsuario_Developer" Association="SmokeModel.Store.FK_UsuariosUsuario_Developer">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Usuarios_Developer" EntitySet="Usuarios_Developer" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Formularios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Formulario" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Modulo_Id" Type="int" Nullable="false" />
+    <Property Name="Permiso_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grupos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Modulos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Pagos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Id_Usuario_Developer" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Fecha" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Usuario_Developer_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Perfiles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Grupos_Id" Type="int" Nullable="false" />
+    <Property Name="Formulario_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Permisos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Perfile_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Softwares">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Categoria" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Edad" Type="int" Nullable="false" />
+    <Property Name="Id_Usuario_Developer" Type="int" Nullable="false" />
+    <Property Name="Lenguaje" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Precio" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Usuario_Developer_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="eMail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Lenguaje" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Pais" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuarios_Developer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Usuario_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_FormulariosPerfiles">
+    <End Role="Formularios" Type="SmokeModel.Store.Formularios" Multiplicity="1" />
+    <End Role="Perfiles" Type="SmokeModel.Store.Perfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Formularios">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Perfiles">
+        <PropertyRef Name="Formulario_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GruposPerfiles">
+    <End Role="Grupos" Type="SmokeModel.Store.Grupos" Multiplicity="1" />
+    <End Role="Perfiles" Type="SmokeModel.Store.Perfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupos">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Perfiles">
+        <PropertyRef Name="Grupos_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModulosFormularios">
+    <End Role="Modulos" Type="SmokeModel.Store.Modulos" Multiplicity="1" />
+    <End Role="Formularios" Type="SmokeModel.Store.Formularios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulos">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Formularios">
+        <PropertyRef Name="Modulo_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PerfilesPermisos">
+    <End Role="Perfiles" Type="SmokeModel.Store.Perfiles" Multiplicity="1" />
+    <End Role="Permisos" Type="SmokeModel.Store.Permisos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Perfiles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Permisos">
+        <PropertyRef Name="Perfile_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PermisosFormularios">
+    <End Role="Permisos" Type="SmokeModel.Store.Permisos" Multiplicity="1" />
+    <End Role="Formularios" Type="SmokeModel.Store.Formularios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Permisos">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Formularios">
+        <PropertyRef Name="Permiso_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_DeveloperPagos">
+    <End Role="Usuarios_Developer" Type="SmokeModel.Store.Usuarios_Developer" Multiplicity="1" />
+    <End Role="Pagos" Type="SmokeModel.Store.Pagos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios_Developer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Pagos">
+        <PropertyRef Name="Usuario_Developer_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_DeveloperSoftware">
+    <End Role="Usuarios_Developer" Type="SmokeModel.Store.Usuarios_Developer" Multiplicity="1" />
+    <End Role="Softwares" Type="SmokeModel.Store.Softwares" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios_Developer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Softwares">
+        <PropertyRef Name="Usuario_Developer_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuariosUsuario_Developer">
+    <End Role="Usuarios" Type="SmokeModel.Store.Usuarios" Multiplicity="1" />
+    <End Role="Usuarios_Developer" Type="SmokeModel.Store.Usuarios_Developer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Usuarios_Developer">
+        <PropertyRef Name="Usuario_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

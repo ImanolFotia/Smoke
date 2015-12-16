@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="Software" EntityType="Model1.Store.Software" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuarios" EntityType="Model1.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pagos" EntityType="Model1.Store.Pagos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioSoftware" EntityType="Model1.Store.UsuarioSoftware" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="moduloes" EntityType="Model1.Store.moduloes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="formularios" EntityType="Model1.Store.formularios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="permisoes" EntityType="Model1.Store.permisoes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="perfils" EntityType="Model1.Store.perfils" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="grupoes" EntityType="Model1.Store.grupoes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuditoriaLogins" EntityType="Model1.Store.AuditoriaLogins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="formulariopermiso" EntityType="Model1.Store.formulariopermiso" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="permisoperfil" EntityType="Model1.Store.permisoperfil" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="grupoUsuarios" EntityType="Model1.Store.grupoUsuarios" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UsuariosSoftware" Association="Model1.Store.UsuariosSoftware">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Software" EntitySet="Software" />
+    </AssociationSet>
+    <AssociationSet Name="UsuariosPagos" Association="Model1.Store.UsuariosPagos">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Pagos" EntitySet="Pagos" />
+    </AssociationSet>
+    <AssociationSet Name="UsuariosUsuarioSoftware" Association="Model1.Store.UsuariosUsuarioSoftware">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="UsuarioSoftware" EntitySet="UsuarioSoftware" />
+    </AssociationSet>
+    <AssociationSet Name="SoftwareUsuarioSoftware" Association="Model1.Store.SoftwareUsuarioSoftware">
+      <End Role="Software" EntitySet="Software" />
+      <End Role="UsuarioSoftware" EntitySet="UsuarioSoftware" />
+    </AssociationSet>
+    <AssociationSet Name="moduloformulario" Association="Model1.Store.moduloformulario">
+      <End Role="modulo" EntitySet="moduloes" />
+      <End Role="formulario" EntitySet="formularios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_formulariopermiso_formulario" Association="Model1.Store.FK_formulariopermiso_formulario">
+      <End Role="formulario" EntitySet="formularios" />
+      <End Role="formulariopermiso" EntitySet="formulariopermiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_formulariopermiso_permiso" Association="Model1.Store.FK_formulariopermiso_permiso">
+      <End Role="permiso" EntitySet="permisoes" />
+      <End Role="formulariopermiso" EntitySet="formulariopermiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_permisoperfil_permiso" Association="Model1.Store.FK_permisoperfil_permiso">
+      <End Role="permiso" EntitySet="permisoes" />
+      <End Role="permisoperfil" EntitySet="permisoperfil" />
+    </AssociationSet>
+    <AssociationSet Name="FK_permisoperfil_perfil" Association="Model1.Store.FK_permisoperfil_perfil">
+      <End Role="perfil" EntitySet="perfils" />
+      <End Role="permisoperfil" EntitySet="permisoperfil" />
+    </AssociationSet>
+    <AssociationSet Name="formularioperfil" Association="Model1.Store.formularioperfil">
+      <End Role="formulario" EntitySet="formularios" />
+      <End Role="perfil" EntitySet="perfils" />
+    </AssociationSet>
+    <AssociationSet Name="grupoperfil" Association="Model1.Store.grupoperfil">
+      <End Role="grupo" EntitySet="grupoes" />
+      <End Role="perfil" EntitySet="perfils" />
+    </AssociationSet>
+    <AssociationSet Name="FK_grupoUsuarios_grupo" Association="Model1.Store.FK_grupoUsuarios_grupo">
+      <End Role="grupo" EntitySet="grupoes" />
+      <End Role="grupoUsuarios" EntitySet="grupoUsuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_grupoUsuarios_Usuarios" Association="Model1.Store.FK_grupoUsuarios_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="grupoUsuarios" EntitySet="grupoUsuarios" />
+    </AssociationSet>
+    <AssociationSet Name="UsuariosAuditoriaLogin" Association="Model1.Store.UsuariosAuditoriaLogin">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="AuditoriaLogin" EntitySet="AuditoriaLogins" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Software">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Categoria" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Edad" Type="int" Nullable="false" />
+    <Property Name="Lenguaje" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Precio" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Usuario_Id" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="eMail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Lenguaje" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Pais" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Dev" Type="int" Nullable="false" />
+    <Property Name="usu_estado" Type="bit" Nullable="false" />
+    <Property Name="usu_Admin" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pagos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" StoreGeneratedPattern="Identity" Nullable="true" />
+    <Property Name="Usuario_Id" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsuarioSoftware">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUsuario" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IdSoftware" Type="int" Nullable="false" />
+    <Property Name="Usuario_Id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Software_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="moduloes">
+    <Key>
+      <PropertyRef Name="mod_codigo" />
+    </Key>
+    <Property Name="mod_codigo" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="mod_descripcion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="formularios">
+    <Key>
+      <PropertyRef Name="frm_codigo" />
+    </Key>
+    <Property Name="frm_codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="frm_descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="frm_formulario" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="frm_estado" Type="bit" Nullable="false" />
+    <Property Name="modulo_mod_codigo" Type="nvarchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="permisoes">
+    <Key>
+      <PropertyRef Name="per_codigo" />
+    </Key>
+    <Property Name="per_codigo" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="per_descripcion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="perfils">
+    <Key>
+      <PropertyRef Name="per_codigo" />
+    </Key>
+    <Property Name="per_codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="formulario_frm_codigo" Type="int" Nullable="false" />
+    <Property Name="grupo_gru_codigo" Type="nvarchar" MaxLength="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="grupoes">
+    <Key>
+      <PropertyRef Name="gru_codigo" />
+    </Key>
+    <Property Name="gru_codigo" Type="nvarchar" Nullable="false" MaxLength="4" />
+    <Property Name="gru_descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="gru_estado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuditoriaLogins">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Usuario" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Login" Type="datetime" Nullable="true" />
+    <Property Name="Logout" Type="datetime" Nullable="true" />
+    <Property Name="Usuario_Id" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="formulariopermiso">
+    <Key>
+      <PropertyRef Name="formulario_frm_codigo" />
+      <PropertyRef Name="permisoes_per_codigo" />
+    </Key>
+    <Property Name="formulario_frm_codigo" Type="int" Nullable="false" />
+    <Property Name="permisoes_per_codigo" Type="nvarchar" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="permisoperfil">
+    <Key>
+      <PropertyRef Name="permiso_per_codigo" />
+      <PropertyRef Name="perfils_per_codigo" />
+    </Key>
+    <Property Name="permiso_per_codigo" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="perfils_per_codigo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="grupoUsuarios">
+    <Key>
+      <PropertyRef Name="grupo_gru_codigo" />
+      <PropertyRef Name="Usuarios_Id" />
+    </Key>
+    <Property Name="grupo_gru_codigo" Type="nvarchar" Nullable="false" MaxLength="4" />
+    <Property Name="Usuarios_Id" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="UsuariosSoftware">
+    <End Role="Usuarios" Type="Model1.Store.Usuarios" Multiplicity="1" />
+    <End Role="Software" Type="Model1.Store.Software" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Software">
+        <PropertyRef Name="Usuario_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UsuariosPagos">
+    <End Role="Usuarios" Type="Model1.Store.Usuarios" Multiplicity="1" />
+    <End Role="Pagos" Type="Model1.Store.Pagos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Pagos">
+        <PropertyRef Name="Usuario_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UsuariosUsuarioSoftware">
+    <End Role="Usuarios" Type="Model1.Store.Usuarios" Multiplicity="1" />
+    <End Role="UsuarioSoftware" Type="Model1.Store.UsuarioSoftware" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UsuarioSoftware">
+        <PropertyRef Name="Usuario_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SoftwareUsuarioSoftware">
+    <End Role="Software" Type="Model1.Store.Software" Multiplicity="1" />
+    <End Role="UsuarioSoftware" Type="Model1.Store.UsuarioSoftware" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Software">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UsuarioSoftware">
+        <PropertyRef Name="Software_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="moduloformulario">
+    <End Role="modulo" Type="Model1.Store.moduloes" Multiplicity="1" />
+    <End Role="formulario" Type="Model1.Store.formularios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="modulo">
+        <PropertyRef Name="mod_codigo" />
+      </Principal>
+      <Dependent Role="formulario">
+        <PropertyRef Name="modulo_mod_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="formularioperfil">
+    <End Role="formulario" Type="Model1.Store.formularios" Multiplicity="1" />
+    <End Role="perfil" Type="Model1.Store.perfils" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="formulario">
+        <PropertyRef Name="frm_codigo" />
+      </Principal>
+      <Dependent Role="perfil">
+        <PropertyRef Name="formulario_frm_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="grupoperfil">
+    <End Role="grupo" Type="Model1.Store.grupoes" Multiplicity="1" />
+    <End Role="perfil" Type="Model1.Store.perfils" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="grupo">
+        <PropertyRef Name="gru_codigo" />
+      </Principal>
+      <Dependent Role="perfil">
+        <PropertyRef Name="grupo_gru_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UsuariosAuditoriaLogin">
+    <End Role="Usuarios" Type="Model1.Store.Usuarios" Multiplicity="1" />
+    <End Role="AuditoriaLogin" Type="Model1.Store.AuditoriaLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AuditoriaLogin">
+        <PropertyRef Name="Usuario_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_formulariopermiso_formulario">
+    <End Role="formulario" Type="Model1.Store.formularios" Multiplicity="1" />
+    <End Role="formulariopermiso" Type="Model1.Store.formulariopermiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="formulario">
+        <PropertyRef Name="frm_codigo" />
+      </Principal>
+      <Dependent Role="formulariopermiso">
+        <PropertyRef Name="formulario_frm_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_formulariopermiso_permiso">
+    <End Role="formulariopermiso" Type="Model1.Store.formulariopermiso" Multiplicity="*" />
+    <End Role="permiso" Type="Model1.Store.permisoes" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="permiso">
+        <PropertyRef Name="per_codigo" />
+      </Principal>
+      <Dependent Role="formulariopermiso">
+        <PropertyRef Name="permisoes_per_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_permisoperfil_permiso">
+    <End Role="permiso" Type="Model1.Store.permisoes" Multiplicity="1" />
+    <End Role="permisoperfil" Type="Model1.Store.permisoperfil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="permiso">
+        <PropertyRef Name="per_codigo" />
+      </Principal>
+      <Dependent Role="permisoperfil">
+        <PropertyRef Name="permiso_per_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_permisoperfil_perfil">
+    <End Role="permisoperfil" Type="Model1.Store.permisoperfil" Multiplicity="*" />
+    <End Role="perfil" Type="Model1.Store.perfils" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="perfil">
+        <PropertyRef Name="per_codigo" />
+      </Principal>
+      <Dependent Role="permisoperfil">
+        <PropertyRef Name="perfils_per_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_grupoUsuarios_grupo">
+    <End Role="grupo" Type="Model1.Store.grupoes" Multiplicity="1" />
+    <End Role="grupoUsuarios" Type="Model1.Store.grupoUsuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="grupo">
+        <PropertyRef Name="gru_codigo" />
+      </Principal>
+      <Dependent Role="grupoUsuarios">
+        <PropertyRef Name="grupo_gru_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_grupoUsuarios_Usuarios">
+    <End Role="grupoUsuarios" Type="Model1.Store.grupoUsuarios" Multiplicity="*" />
+    <End Role="Usuarios" Type="Model1.Store.Usuarios" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="grupoUsuarios">
+        <PropertyRef Name="Usuarios_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

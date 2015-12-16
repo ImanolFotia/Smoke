@@ -1,0 +1,232 @@
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\bin\Release\Form_Carga.exe.config
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\bin\Release\Form_Carga.exe
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\bin\Release\Form_Carga.pdb
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\bin\Release\Controladora.dll
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\bin\Release\Modelo.dll
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\bin\Release\Controladora.pdb
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\bin\Release\Modelo.pdb
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Vista.csprojResolveAssemblyReference.cache
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Carga_Software.resources
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Pago.resources
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_TyC.resources
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Properties.Resources.resources
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Vista.csproj.GenerateResource.Cache
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.exe
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.pdb
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\bin\Release\Form_Carga.exe.config
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.exe
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.pdb
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\bin\Release\Form_Carga.exe
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\bin\Release\Form_Carga.pdb
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\bin\Release\Controladora.dll
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\bin\Release\Modelo.dll
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\bin\Release\Controladora.pdb
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\bin\Release\Modelo.pdb
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Vista.csprojResolveAssemblyReference.cache
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Carga_Software.resources
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Pago.resources
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_TyC.resources
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Properties.Resources.resources
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Vista.csproj.GenerateResource.Cache
+D:\Smoke\Form_Carga\bin\Release\Form_Carga.exe.config
+D:\Smoke\Form_Carga\obj\x86\Release\Form_Carga.exe
+D:\Smoke\Form_Carga\obj\x86\Release\Form_Carga.pdb
+D:\Smoke\Form_Carga\bin\Release\Form_Carga.exe
+D:\Smoke\Form_Carga\bin\Release\Form_Carga.pdb
+D:\Smoke\Form_Carga\bin\Release\Controladora.dll
+D:\Smoke\Form_Carga\bin\Release\Modelo.dll
+D:\Smoke\Form_Carga\bin\Release\Controladora.pdb
+D:\Smoke\Form_Carga\bin\Release\Modelo.pdb
+D:\Smoke\Form_Carga\obj\x86\Release\Vista.csprojResolveAssemblyReference.cache
+D:\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Carga_Software.resources
+D:\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Pago.resources
+D:\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_TyC.resources
+D:\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Properties.Resources.resources
+D:\Smoke\Form_Carga\obj\x86\Release\Vista.csproj.GenerateResource.Cache
+D:\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Usuario.resources
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\bin\Release\Form_Carga.exe.config
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.exe
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.pdb
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\bin\Release\Form_Carga.exe
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\bin\Release\Form_Carga.pdb
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\bin\Release\Controladora.dll
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\bin\Release\Modelo.dll
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\bin\Release\Controladora.pdb
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\bin\Release\Modelo.pdb
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Carga_Software.resources
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Pago.resources
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_TyC.resources
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Usuario.resources
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Properties.Resources.resources
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Pantalla_Inicio.resources
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compra_1.resources
+C:\Users\EAV\Downloads\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compra_2.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\bin\Release\Form_Carga.exe.config
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.exe
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.pdb
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\bin\Release\Form_Carga.exe
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\bin\Release\Form_Carga.pdb
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\bin\Release\Controladora.dll
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\bin\Release\Modelo.dll
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\bin\Release\Controladora.pdb
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\bin\Release\Modelo.pdb
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Vista.csprojResolveAssemblyReference.cache
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compra_2.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compra_1.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Carga_Software.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Pago.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_TyC.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Usuario.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Pantalla_Inicio.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Properties.Resources.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Vista.csproj.GenerateResource.Cache
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compra_2.resources
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compra_1.resources
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Grupo.resources
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Usuario.resources
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Pantalla_Inicio.resources
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Login.resources
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Grupos.resources
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Password.resources
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Usuarios.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Grupo.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Grupos.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Login.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Password.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Usuarios.resources
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compra_2.resources
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compra_1.resources
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Grupo.resources
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Grupos.resources
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Login.resources
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Password.resources
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Usuario.resources
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Usuarios.resources
+C:\Users\IMANOL\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Pantalla_Inicio.resources
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Auditoria_Login.resources
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Tablero.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\bin\Release\Form_Carga.exe.config
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.exe
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.pdb
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\bin\Release\Form_Carga.exe
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\bin\Release\Form_Carga.pdb
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\bin\Release\Controladora.dll
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\bin\Release\Modelo.dll
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\bin\Release\Controladora.pdb
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\bin\Release\Modelo.pdb
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Vista.csprojResolveAssemblyReference.cache
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.Form_Auditoria_Login.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.Form_Compra_2.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.Form_Compra_1.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.Form_Carga_Software.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.Form_Grupo.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.Form_Grupos.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.Form_Login.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.Form_Pago.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.Form_Password.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.Form_Tablero.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.Form_TyC.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.Form_Usuario.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.Form_Usuarios.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.Pantalla_Inicio.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.Properties.Resources.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Vista.csproj.GenerateResource.Cache
+C:\Users\EmilianoAgustin\Desktop\Smoke (4)\Form_Carga\obj\x86\Release\Form_Carga.Form_Registro.resources
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Registro.resources
+C:\Users\IMANOL\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Auditoria_Software.resources
+D:\Desktop\Smoke\Form_Carga\bin\Release\Form_Carga.exe.config
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.exe
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.pdb
+D:\Desktop\Smoke\Form_Carga\bin\Release\Form_Carga.exe
+D:\Desktop\Smoke\Form_Carga\bin\Release\Form_Carga.pdb
+D:\Desktop\Smoke\Form_Carga\bin\Release\Controladora.dll
+D:\Desktop\Smoke\Form_Carga\bin\Release\Modelo.dll
+D:\Desktop\Smoke\Form_Carga\bin\Release\Controladora.pdb
+D:\Desktop\Smoke\Form_Carga\bin\Release\Modelo.pdb
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Auditoria_Login.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Auditoria_Software.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compra_2.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compra_1.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Carga_Software.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Grupo.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Grupos.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Login.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Pago.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Password.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Registro.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Tablero.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_TyC.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Usuario.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Usuarios.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Pantalla_Inicio.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Properties.Resources.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Auditoria_Login.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Auditoria_Software.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compras.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Registro.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Tablero.resources
+C:\Users\EmilianoAgustin\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Descarga.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compras.resources
+D:\Desktop\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Descarga.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\bin\Release\Form_Carga.exe.config
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.exe
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.pdb
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Vista.csprojResolveAssemblyReference.cache
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Auditoria_Login.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Auditoria_Software.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compras.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compra_2.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compra_1.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Carga_Software.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Descarga.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Grupo.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Grupos.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Login.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Pago.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Password.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Registro.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Tablero.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_TyC.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Usuario.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Usuarios.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Pantalla_Inicio.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Properties.Resources.resources
+C:\Users\EmilianoAgustin\Downloads\Smoke\Form_Carga\obj\x86\Release\Vista.csproj.GenerateResource.Cache
+C:\Users\EmilianoAgustin\Downloads\Proyect Smoke\Smoke\Form_Carga\bin\Release\Form_Carga.exe.config
+C:\Users\EmilianoAgustin\Downloads\Proyect Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.exe
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\bin\Release\Form_Carga.exe.config
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.exe
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Vista.csprojResolveAssemblyReference.cache
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Auditoria_Login.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Auditoria_Software.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compras.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compra_2.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Compra_1.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Carga_Software.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Descarga.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Grupo.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Grupos.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Login.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Pago.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Password.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Registro.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Tablero.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_TyC.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Usuario.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Usuarios.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Pantalla_Inicio.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Properties.Resources.resources
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Vista.csproj.GenerateResource.Cache
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\bin\Release\Form_Carga.exe
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\bin\Release\Form_Carga.pdb
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\bin\Release\Controladora.dll
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\bin\Release\Modelo.dll
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\bin\Release\Controladora.pdb
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\bin\Release\Modelo.pdb
+C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.pdb

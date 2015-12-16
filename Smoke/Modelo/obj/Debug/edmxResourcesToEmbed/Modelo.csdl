@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="ModeloContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Software" EntityType="Model1.Software" />
+    <EntitySet Name="Usuarios" EntityType="Model1.Usuarios" />
+    <EntitySet Name="Pagos" EntityType="Model1.Pagos" />
+    <AssociationSet Name="UsuariosSoftware" Association="Model1.UsuariosSoftware">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Software" EntitySet="Software" />
+    </AssociationSet>
+    <AssociationSet Name="UsuariosPagos" Association="Model1.UsuariosPagos">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Pagos" EntitySet="Pagos" />
+    </AssociationSet>
+    <EntitySet Name="UsuarioSoftware" EntityType="Model1.UsuarioSoftware" />
+    <AssociationSet Name="UsuariosUsuarioSoftware" Association="Model1.UsuariosUsuarioSoftware">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="UsuarioSoftware" EntitySet="UsuarioSoftware" />
+    </AssociationSet>
+    <AssociationSet Name="SoftwareUsuarioSoftware" Association="Model1.SoftwareUsuarioSoftware">
+      <End Role="Software" EntitySet="Software" />
+      <End Role="UsuarioSoftware" EntitySet="UsuarioSoftware" />
+    </AssociationSet>
+    <EntitySet Name="moduloes" EntityType="Model1.modulo" />
+    <EntitySet Name="formularios" EntityType="Model1.formulario" />
+    <AssociationSet Name="moduloformulario" Association="Model1.moduloformulario">
+      <End Role="modulo" EntitySet="moduloes" />
+      <End Role="formulario" EntitySet="formularios" />
+    </AssociationSet>
+    <EntitySet Name="permisoes" EntityType="Model1.permiso" />
+    <AssociationSet Name="formulariopermiso" Association="Model1.formulariopermiso">
+      <End Role="formulario" EntitySet="formularios" />
+      <End Role="permiso" EntitySet="permisoes" />
+    </AssociationSet>
+    <EntitySet Name="perfils" EntityType="Model1.perfil" />
+    <AssociationSet Name="permisoperfil" Association="Model1.permisoperfil">
+      <End Role="permiso" EntitySet="permisoes" />
+      <End Role="perfil" EntitySet="perfils" />
+    </AssociationSet>
+    <AssociationSet Name="formularioperfil" Association="Model1.formularioperfil">
+      <End Role="formulario" EntitySet="formularios" />
+      <End Role="perfil" EntitySet="perfils" />
+    </AssociationSet>
+    <EntitySet Name="grupoes" EntityType="Model1.grupo" />
+    <AssociationSet Name="grupoperfil" Association="Model1.grupoperfil">
+      <End Role="grupo" EntitySet="grupoes" />
+      <End Role="perfil" EntitySet="perfils" />
+    </AssociationSet>
+    <AssociationSet Name="grupoUsuarios" Association="Model1.grupoUsuarios">
+      <End Role="grupo" EntitySet="grupoes" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <EntitySet Name="AuditoriaLogins" EntityType="Model1.AuditoriaLogin" />
+    <AssociationSet Name="UsuariosAuditoriaLogin" Association="Model1.UsuariosAuditoriaLogin">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="AuditoriaLogin" EntitySet="AuditoriaLogins" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Software">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Categoria" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" />
+    <Property Type="Int32" Name="Edad" Nullable="false" />
+    <Property Type="String" Name="Lenguaje" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" />
+    <Property Type="String" Name="Precio" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="Model1.UsuariosSoftware" FromRole="Software" ToRole="Usuarios" />
+    <NavigationProperty Name="UsuarioSoftwares" Relationship="Model1.SoftwareUsuarioSoftware" FromRole="Software" ToRole="UsuarioSoftware" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" FixedLength="false" MaxLength="50" Unicode="true" />
+    <Property Type="String" Name="eMail" Nullable="false" />
+    <Property Type="String" Name="Lenguaje" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" />
+    <Property Type="String" Name="Pais" Nullable="false" />
+    <Property Type="String" Name="Password" Nullable="false" />
+    <Property Type="Int32" Name="Dev" Nullable="false" />
+    <NavigationProperty Name="Softwares" Relationship="Model1.UsuariosSoftware" FromRole="Usuarios" ToRole="Software" />
+    <NavigationProperty Name="Pagos" Relationship="Model1.UsuariosPagos" FromRole="Usuarios" ToRole="Pagos" />
+    <NavigationProperty Name="UsuarioSoftwares" Relationship="Model1.UsuariosUsuarioSoftware" FromRole="Usuarios" ToRole="UsuarioSoftware" />
+    <NavigationProperty Name="grupo" Relationship="Model1.grupoUsuarios" FromRole="Usuarios" ToRole="grupo" />
+    <Property Type="Boolean" Name="usu_estado" Nullable="false" />
+    <Property Type="Boolean" Name="usu_Admin" Nullable="false" />
+    <NavigationProperty Name="AuditoriaLogins" Relationship="Model1.UsuariosAuditoriaLogin" FromRole="Usuarios" ToRole="AuditoriaLogin" />
+  </EntityType>
+  <EntityType Name="Pagos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Usuario" Relationship="Model1.UsuariosPagos" FromRole="Pagos" ToRole="Usuarios" />
+  </EntityType>
+  <Association Name="UsuariosSoftware">
+    <End Type="Model1.Usuarios" Role="Usuarios" Multiplicity="1" />
+    <End Type="Model1.Software" Role="Software" Multiplicity="*" />
+  </Association>
+  <Association Name="UsuariosPagos">
+    <End Type="Model1.Usuarios" Role="Usuarios" Multiplicity="1" />
+    <End Type="Model1.Pagos" Role="Pagos" Multiplicity="*" />
+  </Association>
+  <EntityType Name="UsuarioSoftware">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="IdUsuario" Nullable="false" />
+    <Property Type="Int32" Name="IdSoftware" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="Model1.UsuariosUsuarioSoftware" FromRole="UsuarioSoftware" ToRole="Usuarios" />
+    <NavigationProperty Name="Software" Relationship="Model1.SoftwareUsuarioSoftware" FromRole="UsuarioSoftware" ToRole="Software" />
+  </EntityType>
+  <Association Name="UsuariosUsuarioSoftware">
+    <End Type="Model1.Usuarios" Role="Usuarios" Multiplicity="1" />
+    <End Type="Model1.UsuarioSoftware" Role="UsuarioSoftware" Multiplicity="*" />
+  </Association>
+  <Association Name="SoftwareUsuarioSoftware">
+    <End Type="Model1.Software" Role="Software" Multiplicity="1" />
+    <End Type="Model1.UsuarioSoftware" Role="UsuarioSoftware" Multiplicity="*" />
+  </Association>
+  <EntityType Name="modulo">
+    <Key>
+      <PropertyRef Name="mod_codigo" />
+    </Key>
+    <Property Type="String" Name="mod_codigo" Nullable="false" annotation:StoreGeneratedPattern="None" Unicode="true" FixedLength="false" MaxLength="5" />
+    <Property Type="String" Name="mod_descripcion" Nullable="false" />
+    <NavigationProperty Name="formularios" Relationship="Model1.moduloformulario" FromRole="modulo" ToRole="formulario" />
+  </EntityType>
+  <EntityType Name="formulario">
+    <Key>
+      <PropertyRef Name="frm_codigo" />
+    </Key>
+    <Property Type="Int32" Name="frm_codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="frm_descripcion" Nullable="false" />
+    <Property Type="String" Name="frm_formulario" Nullable="false" />
+    <Property Type="Boolean" Name="frm_estado" Nullable="false" />
+    <NavigationProperty Name="modulo" Relationship="Model1.moduloformulario" FromRole="formulario" ToRole="modulo" />
+    <NavigationProperty Name="permisoes" Relationship="Model1.formulariopermiso" FromRole="formulario" ToRole="permiso" />
+    <NavigationProperty Name="perfils" Relationship="Model1.formularioperfil" FromRole="formulario" ToRole="perfil" />
+  </EntityType>
+  <Association Name="moduloformulario">
+    <End Type="Model1.modulo" Role="modulo" Multiplicity="1" />
+    <End Type="Model1.formulario" Role="formulario" Multiplicity="*" />
+  </Association>
+  <EntityType Name="permiso">
+    <Key>
+      <PropertyRef Name="per_codigo" />
+    </Key>
+    <Property Type="String" Name="per_codigo" Nullable="false" annotation:StoreGeneratedPattern="None" FixedLength="false" Unicode="true" MaxLength="1" />
+    <NavigationProperty Name="formulario" Relationship="Model1.formulariopermiso" FromRole="permiso" ToRole="formulario" />
+    <Property Type="String" Name="per_descripcion" Nullable="false" />
+    <NavigationProperty Name="perfils" Relationship="Model1.permisoperfil" FromRole="permiso" ToRole="perfil" />
+  </EntityType>
+  <Association Name="formulariopermiso">
+    <End Type="Model1.formulario" Role="formulario" Multiplicity="*" />
+    <End Type="Model1.permiso" Role="permiso" Multiplicity="*" />
+  </Association>
+  <EntityType Name="perfil">
+    <Key>
+      <PropertyRef Name="per_codigo" />
+    </Key>
+    <Property Type="Int32" Name="per_codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="permiso" Relationship="Model1.permisoperfil" FromRole="perfil" ToRole="permiso" />
+    <NavigationProperty Name="formulario" Relationship="Model1.formularioperfil" FromRole="perfil" ToRole="formulario" />
+    <NavigationProperty Name="grupo" Relationship="Model1.grupoperfil" FromRole="perfil" ToRole="grupo" />
+  </EntityType>
+  <Association Name="permisoperfil">
+    <End Type="Model1.permiso" Role="permiso" Multiplicity="*" />
+    <End Type="Model1.perfil" Role="perfil" Multiplicity="*" />
+  </Association>
+  <Association Name="formularioperfil">
+    <End Type="Model1.formulario" Role="formulario" Multiplicity="1" />
+    <End Type="Model1.perfil" Role="perfil" Multiplicity="*" />
+  </Association>
+  <EntityType Name="grupo">
+    <Key>
+      <PropertyRef Name="gru_codigo" />
+    </Key>
+    <Property Type="String" Name="gru_codigo" Nullable="false" annotation:StoreGeneratedPattern="None" FixedLength="false" MaxLength="4" Unicode="true" />
+    <Property Type="String" Name="gru_descripcion" Nullable="false" />
+    <Property Type="Boolean" Name="gru_estado" Nullable="false" />
+    <NavigationProperty Name="perfils" Relationship="Model1.grupoperfil" FromRole="grupo" ToRole="perfil" />
+    <NavigationProperty Name="Usuarios" Relationship="Model1.grupoUsuarios" FromRole="grupo" ToRole="Usuarios" />
+  </EntityType>
+  <Association Name="grupoperfil">
+    <End Type="Model1.grupo" Role="grupo" Multiplicity="1" />
+    <End Type="Model1.perfil" Role="perfil" Multiplicity="*" />
+  </Association>
+  <Association Name="grupoUsuarios">
+    <End Type="Model1.grupo" Role="grupo" Multiplicity="*" />
+    <End Type="Model1.Usuarios" Role="Usuarios" Multiplicity="*" />
+  </Association>
+  <EntityType Name="AuditoriaLogin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Id_Usuario" Nullable="false" />
+    <Property Type="DateTime" Name="Login" Nullable="true" />
+    <Property Type="DateTime" Name="Logout" Nullable="true" />
+    <NavigationProperty Name="Usuario" Relationship="Model1.UsuariosAuditoriaLogin" FromRole="AuditoriaLogin" ToRole="Usuarios" />
+  </EntityType>
+  <Association Name="UsuariosAuditoriaLogin">
+    <End Type="Model1.Usuarios" Role="Usuarios" Multiplicity="1" />
+    <End Type="Model1.AuditoriaLogin" Role="AuditoriaLogin" Multiplicity="*" />
+  </Association>
+</Schema>

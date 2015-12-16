@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="ModeloContainer">
+    <EntitySetMapping Name="Software">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Software)">
+        <MappingFragment StoreEntitySet="Software">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="Lenguaje" ColumnName="Lenguaje" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Usuarios)">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="eMail" ColumnName="eMail" />
+          <ScalarProperty Name="Lenguaje" ColumnName="Lenguaje" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Dev" ColumnName="Dev" />
+          <ScalarProperty Name="usu_estado" ColumnName="usu_estado" />
+          <ScalarProperty Name="usu_Admin" ColumnName="usu_Admin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pagos">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Pagos)">
+        <MappingFragment StoreEntitySet="Pagos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioSoftware">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.UsuarioSoftware)">
+        <MappingFragment StoreEntitySet="UsuarioSoftware">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdSoftware" ColumnName="IdSoftware" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="moduloes">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.modulo)">
+        <MappingFragment StoreEntitySet="moduloes">
+          <ScalarProperty Name="mod_codigo" ColumnName="mod_codigo" />
+          <ScalarProperty Name="mod_descripcion" ColumnName="mod_descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="formularios">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.formulario)">
+        <MappingFragment StoreEntitySet="formularios">
+          <ScalarProperty Name="frm_codigo" ColumnName="frm_codigo" />
+          <ScalarProperty Name="frm_descripcion" ColumnName="frm_descripcion" />
+          <ScalarProperty Name="frm_formulario" ColumnName="frm_formulario" />
+          <ScalarProperty Name="frm_estado" ColumnName="frm_estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="permisoes">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.permiso)">
+        <MappingFragment StoreEntitySet="permisoes">
+          <ScalarProperty Name="per_codigo" ColumnName="per_codigo" />
+          <ScalarProperty Name="per_descripcion" ColumnName="per_descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="perfils">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.perfil)">
+        <MappingFragment StoreEntitySet="perfils">
+          <ScalarProperty Name="per_codigo" ColumnName="per_codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="grupoes">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.grupo)">
+        <MappingFragment StoreEntitySet="grupoes">
+          <ScalarProperty Name="gru_codigo" ColumnName="gru_codigo" />
+          <ScalarProperty Name="gru_descripcion" ColumnName="gru_descripcion" />
+          <ScalarProperty Name="gru_estado" ColumnName="gru_estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditoriaLogins">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AuditoriaLogin)">
+        <MappingFragment StoreEntitySet="AuditoriaLogins">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Logout" ColumnName="Logout" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UsuariosSoftware" TypeName="Model1.UsuariosSoftware" StoreEntitySet="Software">
+      <EndProperty Name="Usuarios">
+        <ScalarProperty Name="Id" ColumnName="Usuario_Id" />
+      </EndProperty>
+      <EndProperty Name="Software">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UsuariosPagos" TypeName="Model1.UsuariosPagos" StoreEntitySet="Pagos">
+      <EndProperty Name="Usuarios">
+        <ScalarProperty Name="Id" ColumnName="Usuario_Id" />
+      </EndProperty>
+      <EndProperty Name="Pagos">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UsuariosUsuarioSoftware" TypeName="Model1.UsuariosUsuarioSoftware" StoreEntitySet="UsuarioSoftware">
+      <EndProperty Name="Usuarios">
+        <ScalarProperty Name="Id" ColumnName="Usuario_Id" />
+      </EndProperty>
+      <EndProperty Name="UsuarioSoftware">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SoftwareUsuarioSoftware" TypeName="Model1.SoftwareUsuarioSoftware" StoreEntitySet="UsuarioSoftware">
+      <EndProperty Name="Software">
+        <ScalarProperty Name="Id" ColumnName="Software_Id" />
+      </EndProperty>
+      <EndProperty Name="UsuarioSoftware">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="moduloformulario" TypeName="Model1.moduloformulario" StoreEntitySet="formularios">
+      <EndProperty Name="modulo">
+        <ScalarProperty Name="mod_codigo" ColumnName="modulo_mod_codigo" />
+      </EndProperty>
+      <EndProperty Name="formulario">
+        <ScalarProperty Name="frm_codigo" ColumnName="frm_codigo" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="formulariopermiso" TypeName="Model1.formulariopermiso" StoreEntitySet="formulariopermiso">
+      <EndProperty Name="formulario">
+        <ScalarProperty Name="frm_codigo" ColumnName="formulario_frm_codigo" />
+      </EndProperty>
+      <EndProperty Name="permiso">
+        <ScalarProperty Name="per_codigo" ColumnName="permisoes_per_codigo" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="permisoperfil" TypeName="Model1.permisoperfil" StoreEntitySet="permisoperfil">
+      <EndProperty Name="permiso">
+        <ScalarProperty Name="per_codigo" ColumnName="permiso_per_codigo" />
+      </EndProperty>
+      <EndProperty Name="perfil">
+        <ScalarProperty Name="per_codigo" ColumnName="perfils_per_codigo" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="formularioperfil" TypeName="Model1.formularioperfil" StoreEntitySet="perfils">
+      <EndProperty Name="formulario">
+        <ScalarProperty Name="frm_codigo" ColumnName="formulario_frm_codigo" />
+      </EndProperty>
+      <EndProperty Name="perfil">
+        <ScalarProperty Name="per_codigo" ColumnName="per_codigo" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="grupoperfil" TypeName="Model1.grupoperfil" StoreEntitySet="perfils">
+      <EndProperty Name="grupo">
+        <ScalarProperty Name="gru_codigo" ColumnName="grupo_gru_codigo" />
+      </EndProperty>
+      <EndProperty Name="perfil">
+        <ScalarProperty Name="per_codigo" ColumnName="per_codigo" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="grupoUsuarios" TypeName="Model1.grupoUsuarios" StoreEntitySet="grupoUsuarios">
+      <EndProperty Name="grupo">
+        <ScalarProperty Name="gru_codigo" ColumnName="grupo_gru_codigo" />
+      </EndProperty>
+      <EndProperty Name="Usuarios">
+        <ScalarProperty Name="Id" ColumnName="Usuarios_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UsuariosAuditoriaLogin" TypeName="Model1.UsuariosAuditoriaLogin" StoreEntitySet="AuditoriaLogins">
+      <EndProperty Name="Usuarios">
+        <ScalarProperty Name="Id" ColumnName="Usuario_Id" />
+      </EndProperty>
+      <EndProperty Name="AuditoriaLogin">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
