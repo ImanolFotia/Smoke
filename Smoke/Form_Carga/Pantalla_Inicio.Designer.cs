@@ -39,6 +39,7 @@
             this.softwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarPagoMensualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.misComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarCréditoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuantoCréditoTengoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,6 @@
             this.verificarÚltimoPagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.msMENU.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +61,7 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.tslUSUARIO});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 752);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 751);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1263, 22);
             this.statusStrip1.TabIndex = 2;
@@ -141,6 +141,13 @@
             this.cambiarPagoMensualToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.cambiarPagoMensualToolStripMenuItem.Text = "Cambiar pago mensual";
             this.cambiarPagoMensualToolStripMenuItem.Click += new System.EventHandler(this.cambiarPagoMensualToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // misComprasToolStripMenuItem
             // 
@@ -232,23 +239,16 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 24);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(1263, 728);
+            this.webBrowser1.Size = new System.Drawing.Size(1263, 727);
             this.webBrowser1.TabIndex = 4;
             this.webBrowser1.Url = new System.Uri("http://192.168.0.14/Smoke/smoke.php", System.UriKind.Absolute);
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // Pantalla_Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1263, 774);
+            this.ClientSize = new System.Drawing.Size(1263, 773);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.msMENU);

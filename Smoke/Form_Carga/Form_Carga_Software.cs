@@ -89,6 +89,8 @@ namespace Form_Carga
             Modelo.AuditoriaSoftware oAuSoft = new Modelo.AuditoriaSoftware();
             oAuSoft.IdUsuario = Usuario.Id;
             oAuSoft.Fecha_Accion = DateTime.Now;
+            //aplicación del patrón de diseño prototype
+            //se clona el objeto Software, ya instanciado, en el objeto Auditoria (oAuSoft)
             oAuSoft.Software = Software;
             C_Software.AgregarAuditoriaSoftware(oAuSoft);
             Armar_Lista();

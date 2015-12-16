@@ -109,6 +109,11 @@ namespace Form_Carga
 
         }
 
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
 
     }
 }

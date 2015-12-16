@@ -230,3 +230,6 @@ C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\bin\Release\Mo
 C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\bin\Release\Controladora.pdb
 C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\bin\Release\Modelo.pdb
 C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.pdb
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Form_Carga\bin\Release\Form_Carga.exe.config
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.exe
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.pdb

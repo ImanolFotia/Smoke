@@ -1811,7 +1811,9 @@ namespace Modelo
         /// <param name="lenguaje">Initial value of the Lenguaje property.</param>
         /// <param name="nombre">Initial value of the Nombre property.</param>
         /// <param name="precio">Initial value of the Precio property.</param>
-        public static Software CreateSoftware(global::System.Int32 id, global::System.String categoria, global::System.String descripcion, global::System.Int32 edad, global::System.String lenguaje, global::System.String nombre, global::System.String precio)
+        /// <param name="link">Initial value of the Link property.</param>
+        /// <param name="estado">Initial value of the Estado property.</param>
+        public static Software CreateSoftware(global::System.Int32 id, global::System.String categoria, global::System.String descripcion, global::System.Int32 edad, global::System.String lenguaje, global::System.String nombre, global::System.String precio, global::System.String link, global::System.Boolean estado)
         {
             Software software = new Software();
             software.Id = id;
@@ -1821,6 +1823,8 @@ namespace Modelo
             software.Lenguaje = lenguaje;
             software.Nombre = nombre;
             software.Precio = precio;
+            software.Link = link;
+            software.Estado = estado;
             return software;
         }
 
@@ -1998,6 +2002,54 @@ namespace Modelo
         private global::System.String _Precio;
         partial void OnPrecioChanging(global::System.String value);
         partial void OnPrecioChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Link
+        {
+            get
+            {
+                return _Link;
+            }
+            set
+            {
+                OnLinkChanging(value);
+                ReportPropertyChanging("Link");
+                _Link = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Link");
+                OnLinkChanged();
+            }
+        }
+        private global::System.String _Link;
+        partial void OnLinkChanging(global::System.String value);
+        partial void OnLinkChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Boolean Estado
+        {
+            get
+            {
+                return _Estado;
+            }
+            set
+            {
+                OnEstadoChanging(value);
+                ReportPropertyChanging("Estado");
+                _Estado = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Estado");
+                OnEstadoChanged();
+            }
+        }
+        private global::System.Boolean _Estado;
+        partial void OnEstadoChanging(global::System.Boolean value);
+        partial void OnEstadoChanged();
 
         #endregion
 

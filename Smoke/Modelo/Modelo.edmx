@@ -93,6 +93,8 @@
     <Property Name="Lenguaje" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Precio" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Link" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Estado" Type="bit" Nullable="false" />
     <Property Name="Usuario_Id2" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Usuarios">
@@ -483,6 +485,8 @@
           <NavigationProperty Name="Usuario" Relationship="Model1.UsuariosSoftware" FromRole="Software" ToRole="Usuarios" />
           <NavigationProperty Name="UsuarioSoftwares" Relationship="Model1.SoftwareUsuarioSoftware" FromRole="Software" ToRole="UsuarioSoftware" />
           <NavigationProperty Name="AuditoriaSoftwares" Relationship="Model1.SoftwareAuditoriaSoftware" FromRole="Software" ToRole="AuditoriaSoftware" />
+          <Property Type="String" Name="Link" Nullable="false" />
+          <Property Type="Boolean" Name="Estado" Nullable="false" />
         </EntityType>
         <EntityType Name="Usuarios">
           <Key>
@@ -665,6 +669,8 @@
           <ScalarProperty Name="Lenguaje" ColumnName="Lenguaje" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -890,7 +896,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram Name="Model1" ZoomLevel="96" >
-        <EntityTypeShape EntityType="Model1.Software" Width="1.5" PointX="8.375" PointY="5.125" Height="2.9417936197916656" />
+        <EntityTypeShape EntityType="Model1.Software" Width="1.5" PointX="8.375" PointY="5.125" Height="3.3263964843749996" />
         <EntityTypeShape EntityType="Model1.Usuarios" PointX="8.375" PointY="0.5" Width="1.5" Height="4.0956022135416656" />
         <EntityTypeShape EntityType="Model1.Pagos" Width="1.5" PointX="10.5" PointY="2.75" Height="1.7879850260416665" />
         <AssociationConnector Association="Model1.UsuariosSoftware">
