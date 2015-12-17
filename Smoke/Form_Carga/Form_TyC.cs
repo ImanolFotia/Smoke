@@ -14,6 +14,7 @@ namespace Form_Carga
         Controladora.C_Software C_Software = Controladora.C_Software.Obtener_Instancia();
         Modelo.Usuarios oUsuario;
         Modelo.Software oSoftware;
+        Modelo.Software oSoftwareModificar;
         Vista.CVisual CVisual = new Vista.CVisual();
         public Form_TyC(Modelo.Usuarios FormUsuario)
         {
@@ -29,9 +30,10 @@ namespace Form_Carga
                 oSoftware.Categoria = "Shooter";
                 oSoftware.Descripcion = "Best game ever";
                 oSoftware.Edad = 12;
+                oSoftware.Link = "www.mediasmoke.com";
                 oSoftware.Lenguaje = "English";
                 oSoftware.Nombre = "Epsilon";
-                oSoftware.Precio = Convert.ToString(1245);
+                oSoftware.Precio = 1245;
                 oSoftware.Usuario = oUsuario;
                 C_Software.Agregar2(oSoftware);
 
@@ -56,6 +58,8 @@ namespace Form_Carga
             dgv_Software.Columns[4].Visible = false;
             dgv_Software.Columns[8].Visible = false;
             dgv_Software.Columns[9].Visible = false;
+            dgv_Software.Columns[10].Visible = false;
+            dgv_Software.Columns[11].Visible = false;
             dgv_Software.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgv_Software.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             foreach (DataGridViewColumn row in dgv_Software.Columns) row.DefaultCellStyle.BackColor = Color.Black;
@@ -110,7 +114,11 @@ namespace Form_Carga
 
         private void dgv_Software_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            oSoftwareModificar = (Modelo.Software)dgv_Software.CurrentRow.DataBoundItem;
+            Form_Modificar_Software form = new Form_Modificar_Software(oUsuario, oSoftwareModificar);
+            DialogResult dr = form.ShowDialog();
+            this.Hide();
+            if (dr == DialogResult.OK) this.Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

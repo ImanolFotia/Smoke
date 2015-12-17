@@ -9,17 +9,16 @@ using System.Windows.Forms;
 
 namespace Form_Carga
 {
-    public partial class Form_Carga_Software : Form
+    public partial class Form_Modificar_Software : Form
     {
         Form_TyC formtyc;
         Modelo.Software Software;
         Modelo.Usuarios Usuario;
         Controladora.C_Software C_Software;
         Vista.CVisual CVisual = new Vista.CVisual();
-        enum Categoria  { Modelado, Musica, Video };
+        enum Categoria { Modelado, Musica, Video };
         enum Lenguaje { Español, Inglés, Francés };
-       
-        public Form_Carga_Software(Modelo.Usuarios miusuario)
+        public Form_Modificar_Software(Modelo.Usuarios miusuario, Modelo.Software misoftware)
         {
             InitializeComponent();
             this.FormClosing += Form1_FormClosing;
@@ -32,7 +31,31 @@ namespace Form_Carga
             C_Software = Controladora.C_Software.Obtener_Instancia();
             Usuario = miusuario;
             Armar_Lista();
-            
+            Software = misoftware;
+        }
+
+        private void Form_Modificar_Software_Load(object sender, EventArgs e)
+        {
+            txt_nombre.Text = Software.Nombre;
+            txt_desc.Text = Software.Descripcion;
+            txtLink.Text = Software.Link;
+            txt_precio.Text = Software.Precio.ToString();
+            nup_edad.Value = Software.Edad;
+            cmb_cat.SelectedItem = Software.Categoria;
+            cmb_leng.SelectedItem = Software.Lenguaje;
+            actualizarBoton();
+        }
+
+        private void actualizarBoton()
+        {
+            if (Software.Estado == true)
+            {
+                button1.Text = "Activar Software";
+            }
+            else
+            {
+                button1.Text = "Desactivar Software";
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -40,10 +63,6 @@ namespace Form_Carga
             this.DialogResult = DialogResult.OK;
         }
 
-        private void Form_Carga_Software_Load(object sender, EventArgs e)
-        {
-
-        }
         private void Armar_Lista()
         {
             dgv_Software.DataSource = null;
@@ -65,6 +84,7 @@ namespace Form_Carga
             dgv_Software.ReadOnly = true;
             dgv_Software.BackgroundColor = Color.Black;
         }
+
         private void btn_Atras_Click(object sender, EventArgs e)
         {
             formtyc = new Form_TyC(Usuario);
@@ -73,6 +93,38 @@ namespace Form_Carga
         }
 
         private void chk_Aceptar_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //private void btn_Siguiente_Click(object sender, EventArgs e)
+        //{
+        //    Software = new Modelo.Software();
+        //    Software.Nombre = txt_nombre.Text;
+        //    Software.Descripcion = txt_desc.Text;
+        //    Software.Categoria = cmb_cat.SelectedItem.ToString();
+        //    Software.Edad = Convert.ToInt32(nup_edad.Value);
+        //    Software.Lenguaje = cmb_leng.SelectedItem.ToString();
+        //    Software.Precio = Convert.ToDecimal(txt_precio.Text);
+        //    Software.Link = txtLink.Text;
+        //    Software.Usuario = Usuario;
+        //    C_Software.Agregar2(Software);
+        //    Modelo.AuditoriaSoftware oAuSoft = new Modelo.AuditoriaSoftware();
+        //    oAuSoft.IdUsuario = Usuario.Id;
+        //    oAuSoft.Fecha_Accion = DateTime.Now;
+        //    oAuSoft.Accion = "Subir";
+        //    //aplicación del patrón de diseño prototype
+        //    //se clona el objeto Software, ya instanciado, en el objeto Auditoria (oAuSoft)
+        //    oAuSoft.Software = Software;
+        //    C_Software.AgregarAuditoriaSoftware(oAuSoft);
+        //    Armar_Lista();
+        //    MessageBox.Show("Carga de software exitosa.");
+        //    formtyc = new Form_TyC(Usuario);
+        //    formtyc.Show();
+        //    this.Close();
+        //}
+
+        private void chk_Aceptar_CheckedChanged_1(object sender, EventArgs e)
         {
             decimal parsedValue;
             if (decimal.TryParse(txt_precio.Text, out parsedValue) && !string.IsNullOrWhiteSpace(txt_desc.Text) && !string.IsNullOrWhiteSpace(txt_nombre.Text) && !string.IsNullOrWhiteSpace(txtLink.Text) && !string.IsNullOrWhiteSpace(txt_precio.Text))
@@ -90,10 +142,10 @@ namespace Form_Carga
                 }
             }
         }
-     
-        private void btn_Siguiente_Click(object sender, EventArgs e)
+
+        private void btn_Siguiente_Click_1(object sender, EventArgs e)
         {
-            Software = new Modelo.Software();
+            
             Software.Nombre = txt_nombre.Text;
             Software.Descripcion = txt_desc.Text;
             Software.Categoria = cmb_cat.SelectedItem.ToString();
@@ -102,11 +154,11 @@ namespace Form_Carga
             Software.Precio = Convert.ToDecimal(txt_precio.Text);
             Software.Link = txtLink.Text;
             Software.Usuario = Usuario;
-            C_Software.Agregar2(Software);
+            C_Software.Modificar(Software);
             Modelo.AuditoriaSoftware oAuSoft = new Modelo.AuditoriaSoftware();
             oAuSoft.IdUsuario = Usuario.Id;
             oAuSoft.Fecha_Accion = DateTime.Now;
-            oAuSoft.Accion = "Subir" + Environment.NewLine +
+            oAuSoft.Accion = "Modificar: " + Environment.NewLine +
                                 " ID: " + Software.Id + Environment.NewLine +
                                 " Nombre: " + txt_nombre.Text + Environment.NewLine +
                                 " Descripcion: " + txt_desc.Text + Environment.NewLine +
@@ -119,24 +171,31 @@ namespace Form_Carga
             //se clona el objeto Software, ya instanciado, en el objeto Auditoria (oAuSoft)
             oAuSoft.Software = Software;
             C_Software.AgregarAuditoriaSoftware(oAuSoft);
-            Armar_Lista();
-            MessageBox.Show("Carga de software exitosa.");
+            MessageBox.Show("Modificación de software exitosa.");
             formtyc = new Form_TyC(Usuario);
             formtyc.Show();
             this.Close();
         }
-        private void cmb_Usuario_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Software.Estado = !Software.Estado;
+            MessageBox.Show((Software.Estado) ? "Tu Software Esta desactivado" : "Tu Software Esta activado");
+            C_Software.Modificar(Software);
+            Modelo.AuditoriaSoftware oAuSoft = new Modelo.AuditoriaSoftware();
+            oAuSoft.IdUsuario = Usuario.Id;
+            oAuSoft.Fecha_Accion = DateTime.Now;
+            oAuSoft.Accion = (Software.Estado ? "Cambio de estado: Baja"+ Environment.NewLine + "ID: " + Software.Id : "Cambio de estado: Alta"+ Environment.NewLine + "ID: " + Software.Id);
+            oAuSoft.Software = Software;
+            C_Software.AgregarAuditoriaSoftware(oAuSoft);
+            actualizarBoton();
         }
+
         private void dgv_Software_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void cmb_leng_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }

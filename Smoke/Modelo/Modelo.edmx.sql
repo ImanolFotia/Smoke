@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 12/16/2015 15:15:21
+-- Date Created: 12/16/2015 22:16:11
 -- Generated from EDMX file: C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Modelo\Modelo.edmx
 -- --------------------------------------------------
 
@@ -125,7 +125,7 @@ CREATE TABLE [dbo].[Software] (
     [Edad] int  NOT NULL,
     [Lenguaje] nvarchar(max)  NOT NULL,
     [Nombre] nvarchar(max)  NOT NULL,
-    [Precio] nvarchar(max)  NOT NULL,
+    [Precio] decimal(18,0)  NOT NULL,
     [Link] nvarchar(max)  NOT NULL,
     [Estado] bit  NOT NULL,
     [Usuario_Id2] int  NOT NULL
@@ -152,7 +152,8 @@ GO
 CREATE TABLE [dbo].[Pagos] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Fecha] datetime  NULL,
-    [Monto] nvarchar(max)  NOT NULL,
+    [Monto] decimal(18,0)  NOT NULL,
+    [Tipo] bit  NOT NULL,
     [Usuario_Id2] int  NOT NULL
 );
 GO
@@ -231,7 +232,7 @@ GO
 CREATE TABLE [dbo].[PagoMensualMontoes] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Monto] decimal(18,0)  NOT NULL,
-    [FechaModificacion] nvarchar(max)  NOT NULL,
+    [FechaModificacion] datetime  NOT NULL,
     [IdUsuario] nvarchar(max)  NOT NULL
 );
 GO

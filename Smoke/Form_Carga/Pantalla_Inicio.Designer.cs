@@ -38,6 +38,8 @@
             this.auditoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.softwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pagoMensualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarPagoMensualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.misComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -116,7 +118,9 @@
             // 
             this.auditoriaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.softwareToolStripMenuItem,
-            this.loginToolStripMenuItem});
+            this.loginToolStripMenuItem,
+            this.usuariosToolStripMenuItem,
+            this.pagoMensualToolStripMenuItem});
             this.auditoriaToolStripMenuItem.Name = "auditoriaToolStripMenuItem";
             this.auditoriaToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.auditoriaToolStripMenuItem.Text = "Auditoria";
@@ -124,16 +128,30 @@
             // softwareToolStripMenuItem
             // 
             this.softwareToolStripMenuItem.Name = "softwareToolStripMenuItem";
-            this.softwareToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.softwareToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.softwareToolStripMenuItem.Text = "Software";
             this.softwareToolStripMenuItem.Click += new System.EventHandler(this.softwareToolStripMenuItem_Click);
             // 
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
+            // pagoMensualToolStripMenuItem
+            // 
+            this.pagoMensualToolStripMenuItem.Name = "pagoMensualToolStripMenuItem";
+            this.pagoMensualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pagoMensualToolStripMenuItem.Text = "Pago Mensual";
+            this.pagoMensualToolStripMenuItem.Click += new System.EventHandler(this.pagoMensualToolStripMenuItem_Click);
             // 
             // cambiarPagoMensualToolStripMenuItem
             // 
@@ -290,5 +308,7 @@
         private System.Windows.Forms.ToolStripMenuItem verificarÚltimoPagoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambiarPagoMensualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pagoMensualToolStripMenuItem;
     }
 }

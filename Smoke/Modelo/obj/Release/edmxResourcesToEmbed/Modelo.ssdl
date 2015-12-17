@@ -87,7 +87,11 @@
     <Property Name="Edad" Type="int" Nullable="false" />
     <Property Name="Lenguaje" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+<<<<<<< HEAD
     <Property Name="Precio" Type="nvarchar(max)" Nullable="false" />
+=======
+    <Property Name="Precio" Type="decimal" Nullable="false" />
+>>>>>>> 6c16e6437d1c0698c43224cb57928ce61d50812c
     <Property Name="Link" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Estado" Type="bit" Nullable="false" />
     <Property Name="Usuario_Id2" Type="int" Nullable="false" />
@@ -114,7 +118,8 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Fecha" Type="datetime" Nullable="true" />
-    <Property Name="Monto" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Monto" Type="decimal" Nullable="false" />
+    <Property Name="Tipo" Type="bit" Nullable="false" />
     <Property Name="Usuario_Id2" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="UsuarioSoftware">
@@ -193,7 +198,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Monto" Type="decimal" Nullable="false" />
-    <Property Name="FechaModificacion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
     <Property Name="IdUsuario" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="formulariopermiso">

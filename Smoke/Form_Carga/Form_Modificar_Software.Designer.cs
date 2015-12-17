@@ -1,6 +1,6 @@
 ﻿namespace Form_Carga
 {
-    partial class Form_Carga_Software
+    partial class Form_Modificar_Software
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Carga_Software));
-            this.btn_Siguiente = new System.Windows.Forms.Button();
-            this.chk_Aceptar = new System.Windows.Forms.CheckBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Modificar_Software));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgv_Software = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtLink = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,40 +46,14 @@
             this.nup_edad = new System.Windows.Forms.NumericUpDown();
             this.txt_desc = new System.Windows.Forms.TextBox();
             this.cmb_cat = new System.Windows.Forms.ComboBox();
-            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtLink = new System.Windows.Forms.TextBox();
+            this.btn_Siguiente = new System.Windows.Forms.Button();
+            this.chk_Aceptar = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Software)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nup_edad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_Siguiente
-            // 
-            this.btn_Siguiente.BackColor = System.Drawing.SystemColors.InfoText;
-            this.btn_Siguiente.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btn_Siguiente.Location = new System.Drawing.Point(685, 279);
-            this.btn_Siguiente.Name = "btn_Siguiente";
-            this.btn_Siguiente.Size = new System.Drawing.Size(262, 23);
-            this.btn_Siguiente.TabIndex = 9;
-            this.btn_Siguiente.Text = "Finalizar";
-            this.btn_Siguiente.UseVisualStyleBackColor = true;
-            this.btn_Siguiente.Click += new System.EventHandler(this.btn_Siguiente_Click);
-            // 
-            // chk_Aceptar
-            // 
-            this.chk_Aceptar.AutoSize = true;
-            this.chk_Aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.chk_Aceptar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.chk_Aceptar.Location = new System.Drawing.Point(562, 279);
-            this.chk_Aceptar.Name = "chk_Aceptar";
-            this.chk_Aceptar.Size = new System.Drawing.Size(50, 17);
-            this.chk_Aceptar.TabIndex = 8;
-            this.chk_Aceptar.Text = "Subir";
-            this.chk_Aceptar.UseVisualStyleBackColor = false;
-            this.chk_Aceptar.CheckedChanged += new System.EventHandler(this.chk_Aceptar_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -89,7 +62,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(500, 657);
-            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Su software:";
             // 
@@ -119,12 +92,28 @@
             this.groupBox2.Controls.Add(this.txt_desc);
             this.groupBox2.Controls.Add(this.cmb_cat);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(518, 50);
+            this.groupBox2.Location = new System.Drawing.Point(518, 31);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(454, 223);
-            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del software:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(14, 196);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Link:";
+            // 
+            // txtLink
+            // 
+            this.txtLink.Location = new System.Drawing.Point(95, 193);
+            this.txtLink.Name = "txtLink";
+            this.txtLink.Size = new System.Drawing.Size(353, 20);
+            this.txtLink.TabIndex = 14;
             // 
             // label7
             // 
@@ -203,7 +192,6 @@
             this.cmb_leng.Name = "cmb_leng";
             this.cmb_leng.Size = new System.Drawing.Size(354, 21);
             this.cmb_leng.TabIndex = 4;
-            this.cmb_leng.SelectedIndexChanged += new System.EventHandler(this.cmb_leng_SelectedIndexChanged);
             // 
             // nup_edad
             // 
@@ -231,48 +219,61 @@
             this.cmb_cat.Size = new System.Drawing.Size(353, 21);
             this.cmb_cat.TabIndex = 0;
             // 
-            // usuariosBindingSource
+            // btn_Siguiente
             // 
-            this.usuariosBindingSource.DataSource = typeof(Modelo.Usuarios);
+            this.btn_Siguiente.BackColor = System.Drawing.SystemColors.InfoText;
+            this.btn_Siguiente.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btn_Siguiente.Location = new System.Drawing.Point(695, 260);
+            this.btn_Siguiente.Name = "btn_Siguiente";
+            this.btn_Siguiente.Size = new System.Drawing.Size(262, 23);
+            this.btn_Siguiente.TabIndex = 13;
+            this.btn_Siguiente.Text = "Finalizar";
+            this.btn_Siguiente.UseVisualStyleBackColor = true;
+            this.btn_Siguiente.Click += new System.EventHandler(this.btn_Siguiente_Click_1);
             // 
-            // label5
+            // chk_Aceptar
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 196);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Link:";
+            this.chk_Aceptar.AutoSize = true;
+            this.chk_Aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.chk_Aceptar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.chk_Aceptar.Location = new System.Drawing.Point(572, 260);
+            this.chk_Aceptar.Name = "chk_Aceptar";
+            this.chk_Aceptar.Size = new System.Drawing.Size(50, 17);
+            this.chk_Aceptar.TabIndex = 12;
+            this.chk_Aceptar.Text = "Subir";
+            this.chk_Aceptar.UseVisualStyleBackColor = false;
+            this.chk_Aceptar.CheckedChanged += new System.EventHandler(this.chk_Aceptar_CheckedChanged_1);
             // 
-            // txtLink
+            // button1
             // 
-            this.txtLink.Location = new System.Drawing.Point(95, 193);
-            this.txtLink.Name = "txtLink";
-            this.txtLink.Size = new System.Drawing.Size(353, 20);
-            this.txtLink.TabIndex = 14;
+            this.button1.Location = new System.Drawing.Point(538, 425);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 28);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Desactivar Software";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form_Carga_Software
+            // Form_Modificar_Software
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(984, 681);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(982, 671);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Siguiente);
             this.Controls.Add(this.chk_Aceptar);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form_Carga_Software";
-            this.Text = "Subir software";
-            this.TransparencyKey = System.Drawing.Color.Lime;
-            this.Load += new System.EventHandler(this.Form_Carga_Software_Load);
+            this.Name = "Form_Modificar_Software";
+            this.Text = "Form_Modificar_Software";
+            this.Load += new System.EventHandler(this.Form_Modificar_Software_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Software)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nup_edad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,11 +281,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_Siguiente;
-        private System.Windows.Forms.CheckBox chk_Aceptar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgv_Software;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtLink;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
@@ -297,9 +298,9 @@
         private System.Windows.Forms.NumericUpDown nup_edad;
         private System.Windows.Forms.TextBox txt_desc;
         private System.Windows.Forms.ComboBox cmb_cat;
-        private System.Windows.Forms.BindingSource usuariosBindingSource;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtLink;
+        private System.Windows.Forms.Button btn_Siguiente;
+        private System.Windows.Forms.CheckBox chk_Aceptar;
+        private System.Windows.Forms.Button button1;
 
     }
 }

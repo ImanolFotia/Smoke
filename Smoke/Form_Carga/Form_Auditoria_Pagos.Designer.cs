@@ -1,6 +1,6 @@
 ﻿namespace Form_Carga
 {
-    partial class Form_Auditoria_Software
+    partial class Form_Auditoria_Pagos
     {
         /// <summary>
         /// Required designer variable.
@@ -35,13 +35,13 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(-2, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(783, 559);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Size = new System.Drawing.Size(786, 561);
+            this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Form_Auditoria_Software
+            // Form_Auditoria_Pagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -49,9 +49,8 @@
             this.Controls.Add(this.dataGridView1);
             this.MaximumSize = new System.Drawing.Size(800, 600);
             this.MinimumSize = new System.Drawing.Size(800, 600);
-            this.Name = "Form_Auditoria_Software";
-            this.Text = "Form_Auditoria_Software";
-            this.Load += new System.EventHandler(this.Form_Auditoria_Software_Load);
+            this.Name = "Form_Auditoria_Pagos";
+            this.Text = "Form_Auditoria_Pagos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

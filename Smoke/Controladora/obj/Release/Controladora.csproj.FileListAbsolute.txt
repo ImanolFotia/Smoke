@@ -54,6 +54,7 @@ C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Controladora\bin\Release\
 C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Controladora\obj\Release\Controladora.csprojResolveAssemblyReference.cache
 C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Controladora\obj\Release\Controladora.dll
 C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Controladora\obj\Release\Controladora.pdb
+<<<<<<< HEAD
 C:\Users\Imanol\Downloads\Project Smoke\Smoke\Controladora\bin\Release\Controladora.dll
 C:\Users\Imanol\Downloads\Project Smoke\Smoke\Controladora\bin\Release\Controladora.pdb
 C:\Users\Imanol\Downloads\Project Smoke\Smoke\Controladora\bin\Release\Modelo.dll
@@ -61,3 +62,12 @@ C:\Users\Imanol\Downloads\Project Smoke\Smoke\Controladora\bin\Release\Modelo.pd
 C:\Users\Imanol\Downloads\Project Smoke\Smoke\Controladora\obj\Release\Controladora.csprojResolveAssemblyReference.cache
 C:\Users\Imanol\Downloads\Project Smoke\Smoke\Controladora\obj\Release\Controladora.dll
 C:\Users\Imanol\Downloads\Project Smoke\Smoke\Controladora\obj\Release\Controladora.pdb
+=======
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Controladora\bin\Release\Controladora.dll
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Controladora\bin\Release\Controladora.pdb
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Controladora\bin\Release\Modelo.dll
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Controladora\bin\Release\Modelo.pdb
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Controladora\obj\Release\Controladora.csprojResolveAssemblyReference.cache
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Controladora\obj\Release\Controladora.dll
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Controladora\obj\Release\Controladora.pdb
+>>>>>>> 6c16e6437d1c0698c43224cb57928ce61d50812c

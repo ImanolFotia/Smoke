@@ -46,9 +46,18 @@ C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Modelo\bin\Release\Modelo
 C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Modelo\obj\Release\Modelo.csprojResolveAssemblyReference.cache
 C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Modelo\obj\Release\Modelo.dll
 C:\Users\EmilianoAgustin\Downloads\Project Smoke\Smoke\Modelo\obj\Release\Modelo.pdb
+<<<<<<< HEAD
 C:\Users\Imanol\Downloads\Project Smoke\Smoke\Modelo\bin\Release\Modelo.dll.config
 C:\Users\Imanol\Downloads\Project Smoke\Smoke\Modelo\bin\Release\Modelo.dll
 C:\Users\Imanol\Downloads\Project Smoke\Smoke\Modelo\bin\Release\Modelo.pdb
 C:\Users\Imanol\Downloads\Project Smoke\Smoke\Modelo\obj\Release\Modelo.csprojResolveAssemblyReference.cache
 C:\Users\Imanol\Downloads\Project Smoke\Smoke\Modelo\obj\Release\Modelo.dll
 C:\Users\Imanol\Downloads\Project Smoke\Smoke\Modelo\obj\Release\Modelo.pdb
+=======
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Modelo\bin\Release\Modelo.dll.config
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Modelo\bin\Release\Modelo.dll
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Modelo\bin\Release\Modelo.pdb
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Modelo\obj\Release\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Modelo\obj\Release\Modelo.dll
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Modelo\obj\Release\Modelo.pdb
+>>>>>>> 6c16e6437d1c0698c43224cb57928ce61d50812c

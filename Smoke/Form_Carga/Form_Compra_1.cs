@@ -87,6 +87,8 @@ namespace Form_Carga
             dgv_Software.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dgv_Software.Columns[8].Visible = false;
             dgv_Software.Columns[9].Visible = false;
+            dgv_Software.Columns[10].Visible = false;
+            dgv_Software.Columns[11].Visible = false;
             //dgv_Software.AutoResizeColumns();
             //dgv_Software.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //dgv_Software.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;

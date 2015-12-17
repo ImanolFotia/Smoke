@@ -129,10 +129,10 @@ namespace CONTROLADORA
         //Obtener último pago
         public Modelo.Pagos Obtener_Ult_Pago(Modelo.Usuarios Usuario)
         {
-
             var UP = oModelo.Pagos
+                       .Where(p => p.Tipo == false)
                        .OrderByDescending(p => p.Id)
-                       .FirstOrDefault();
+                       .First();
             return UP;
 
             //string UID = Usuario.Id;
@@ -156,12 +156,20 @@ namespace CONTROLADORA
             oModelo.SaveChanges();
         }
 
+        public void AgregarMonto(Modelo.PagoMensualMonto PagoMensualObjeto)
+        {
+            oModelo.AddToPagoMensualMontoes(PagoMensualObjeto);
+            oModelo.SaveChanges();
+        }
+
         //Obtener el monto de pago
         public decimal Obtener_PagoMensualMonto()
         {
-            int ID = 1;
-            var q = oModelo.PagoMensualMontoes.Where(x => x.Id == ID).Select(x => x.Monto);
-            return q.First();
+
+            var UP = oModelo.PagoMensualMontoes
+           .OrderByDescending(p => p.Id)
+           .FirstOrDefault();
+            return UP.Monto;
         }
 
     }
