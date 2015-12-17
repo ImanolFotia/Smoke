@@ -56,6 +56,8 @@ namespace Form_Carga
             dgv_Software.Columns[4].Visible = false;
             dgv_Software.Columns[8].Visible = false;
             dgv_Software.Columns[9].Visible = false;
+            dgv_Software.Columns[10].Visible = false;
+            dgv_Software.Columns[11].Visible = false;
             dgv_Software.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgv_Software.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             foreach (DataGridViewColumn row in dgv_Software.Columns) row.DefaultCellStyle.BackColor = Color.Black;
@@ -104,7 +106,15 @@ namespace Form_Carga
             Modelo.AuditoriaSoftware oAuSoft = new Modelo.AuditoriaSoftware();
             oAuSoft.IdUsuario = Usuario.Id;
             oAuSoft.Fecha_Accion = DateTime.Now;
-            oAuSoft.Accion = "Subir" + Environment.NewLine + "ID: " + Software.Id;
+            oAuSoft.Accion = "Subir" + Environment.NewLine +
+                                " ID: " + Software.Id + Environment.NewLine +
+                                " Nombre: " + txt_nombre.Text + Environment.NewLine +
+                                " Descripcion: " + txt_desc.Text + Environment.NewLine +
+                                " Categoria: " + cmb_cat.SelectedItem.ToString() + Environment.NewLine +
+                                " Edad: " + Convert.ToInt32(nup_edad.Value) + Environment.NewLine +
+                                " Lenguaje: " + cmb_leng.SelectedItem.ToString() + Environment.NewLine +
+                                " Precio: " + Convert.ToDecimal(txt_precio.Text) + Environment.NewLine +
+                                " Link: " + txtLink.Text;
             //aplicación del patrón de diseño prototype
             //se clona el objeto Software, ya instanciado, en el objeto Auditoria (oAuSoft)
             oAuSoft.Software = Software;

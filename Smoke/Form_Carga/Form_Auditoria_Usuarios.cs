@@ -30,9 +30,20 @@ namespace Form_Carga
             dataGridView1.DataSource = null;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.DataSource = C_Usuarios.Listar_Usuarios();
+            dataGridView1.Columns[5].Visible = false;
+            dataGridView1.Columns[11].Visible = false;
+            dataGridView1.Columns[12].Visible = false;
+            dataGridView1.Columns[13].Visible = false;
+            dataGridView1.Columns[14].Visible = false;
+            dataGridView1.Columns[15].Visible = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Form_Auditoria_Usuarios_Load(object sender, EventArgs e)
         {
 
         }

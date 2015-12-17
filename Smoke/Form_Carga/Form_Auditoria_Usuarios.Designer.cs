@@ -51,6 +51,7 @@
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Form_Auditoria_Usuarios";
             this.Text = "Form_Auditoria_Usuarios";
+            this.Load += new System.EventHandler(this.Form_Auditoria_Usuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

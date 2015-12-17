@@ -58,6 +58,8 @@ namespace Form_Carga
             dgv_Software.Columns[4].Visible = false;
             dgv_Software.Columns[8].Visible = false;
             dgv_Software.Columns[9].Visible = false;
+            dgv_Software.Columns[10].Visible = false;
+            dgv_Software.Columns[11].Visible = false;
             dgv_Software.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgv_Software.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             foreach (DataGridViewColumn row in dgv_Software.Columns) row.DefaultCellStyle.BackColor = Color.Black;

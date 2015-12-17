@@ -73,6 +73,7 @@
             this.dgv_Software.Name = "dgv_Software";
             this.dgv_Software.Size = new System.Drawing.Size(488, 632);
             this.dgv_Software.TabIndex = 0;
+            this.dgv_Software.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Software_CellContentClick);
             // 
             // groupBox2
             // 
