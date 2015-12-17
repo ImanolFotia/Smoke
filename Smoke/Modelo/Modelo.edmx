@@ -92,7 +92,7 @@
     <Property Name="Edad" Type="int" Nullable="false" />
     <Property Name="Lenguaje" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Precio" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Precio" Type="decimal" Nullable="false" />
     <Property Name="Link" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Estado" Type="bit" Nullable="false" />
     <Property Name="Usuario_Id2" Type="int" Nullable="false" />
@@ -119,7 +119,8 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Fecha" Type="datetime" Nullable="true" />
-    <Property Name="Monto" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Monto" Type="decimal" Nullable="false" />
+    <Property Name="Tipo" Type="bit" Nullable="false" />
     <Property Name="Usuario_Id2" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="UsuarioSoftware">
@@ -198,7 +199,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Monto" Type="decimal" Nullable="false" />
-    <Property Name="FechaModificacion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" Nullable="false" />
     <Property Name="IdUsuario" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="formulariopermiso">
@@ -481,7 +482,7 @@
           <Property Type="Int32" Name="Edad" Nullable="false" />
           <Property Type="String" Name="Lenguaje" Nullable="false" />
           <Property Type="String" Name="Nombre" Nullable="false" />
-          <Property Type="String" Name="Precio" Nullable="false" />
+          <Property Type="Decimal" Name="Precio" Nullable="false" />
           <NavigationProperty Name="Usuario" Relationship="Model1.UsuariosSoftware" FromRole="Software" ToRole="Usuarios" />
           <NavigationProperty Name="UsuarioSoftwares" Relationship="Model1.SoftwareUsuarioSoftware" FromRole="Software" ToRole="UsuarioSoftware" />
           <NavigationProperty Name="AuditoriaSoftwares" Relationship="Model1.SoftwareAuditoriaSoftware" FromRole="Software" ToRole="AuditoriaSoftware" />
@@ -516,7 +517,8 @@
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="DateTime" Name="Fecha" annotation:StoreGeneratedPattern="None" Nullable="true" />
           <NavigationProperty Name="Usuario" Relationship="Model1.UsuariosPagos" FromRole="Pagos" ToRole="Usuarios" />
-          <Property Type="String" Name="Monto" Nullable="false" />
+          <Property Type="Decimal" Name="Monto" Nullable="false" />
+          <Property Type="Boolean" Name="Tipo" Nullable="false" />
         </EntityType>
         <Association Name="UsuariosSoftware">
           <End Type="Model1.Usuarios" Multiplicity="1" Role="Usuarios" />
@@ -650,7 +652,7 @@
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="Decimal" Name="Monto" Nullable="false" />
-          <Property Type="String" Name="FechaModificacion" Nullable="false" />
+          <Property Type="DateTime" Name="FechaModificacion" Nullable="false" />
           <Property Type="String" Name="IdUsuario" Nullable="false" />
         </EntityType>
       </Schema>
@@ -697,6 +699,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
           <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -898,14 +901,14 @@
       <Diagram Name="Model1" ZoomLevel="96" >
         <EntityTypeShape EntityType="Model1.Software" Width="1.5" PointX="8.375" PointY="5.125" Height="3.3263964843749996" />
         <EntityTypeShape EntityType="Model1.Usuarios" PointX="8.375" PointY="0.5" Width="1.5" Height="4.0956022135416656" />
-        <EntityTypeShape EntityType="Model1.Pagos" Width="1.5" PointX="10.5" PointY="2.75" Height="1.7879850260416665" />
+        <EntityTypeShape EntityType="Model1.Pagos" Width="1.5" PointX="10.5" PointY="2.75" Height="1.9802864583333335" />
         <AssociationConnector Association="Model1.UsuariosSoftware">
           <ConnectorPoint PointX="9.125" PointY="4.5956022135416656" />
           <ConnectorPoint PointX="9.125" PointY="5.125" />
         </AssociationConnector>
         <AssociationConnector Association="Model1.UsuariosPagos">
-          <ConnectorPoint PointX="9.875" PointY="3.6439925130208333" />
-          <ConnectorPoint PointX="10.5" PointY="3.6439925130208333" />
+          <ConnectorPoint PointX="9.875" PointY="3.6728011067708328" />
+          <ConnectorPoint PointX="10.5" PointY="3.6728011067708328" />
         </AssociationConnector>
         <EntityTypeShape EntityType="Model1.UsuarioSoftware" Width="1.5" PointX="6.125" PointY="3.75" Height="1.9802864583333326" />
         <AssociationConnector Association="Model1.UsuariosUsuarioSoftware">

@@ -48,6 +48,8 @@
             this.txt_desc = new System.Windows.Forms.TextBox();
             this.cmb_cat = new System.Windows.Forms.ComboBox();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtLink = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Software)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -59,7 +61,7 @@
             // 
             this.btn_Siguiente.BackColor = System.Drawing.SystemColors.InfoText;
             this.btn_Siguiente.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btn_Siguiente.Location = new System.Drawing.Point(688, 265);
+            this.btn_Siguiente.Location = new System.Drawing.Point(685, 279);
             this.btn_Siguiente.Name = "btn_Siguiente";
             this.btn_Siguiente.Size = new System.Drawing.Size(262, 23);
             this.btn_Siguiente.TabIndex = 9;
@@ -72,7 +74,7 @@
             this.chk_Aceptar.AutoSize = true;
             this.chk_Aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.chk_Aceptar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.chk_Aceptar.Location = new System.Drawing.Point(562, 265);
+            this.chk_Aceptar.Location = new System.Drawing.Point(562, 279);
             this.chk_Aceptar.Name = "chk_Aceptar";
             this.chk_Aceptar.Size = new System.Drawing.Size(50, 17);
             this.chk_Aceptar.TabIndex = 8;
@@ -102,6 +104,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.txtLink);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label1);
@@ -117,7 +121,7 @@
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(518, 50);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(454, 209);
+            this.groupBox2.Size = new System.Drawing.Size(454, 223);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del software:";
@@ -231,6 +235,22 @@
             // 
             this.usuariosBindingSource.DataSource = typeof(Modelo.Usuarios);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(14, 196);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Link:";
+            // 
+            // txtLink
+            // 
+            this.txtLink.Location = new System.Drawing.Point(95, 193);
+            this.txtLink.Name = "txtLink";
+            this.txtLink.Size = new System.Drawing.Size(353, 20);
+            this.txtLink.TabIndex = 14;
+            // 
             // Form_Carga_Software
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +298,8 @@
         private System.Windows.Forms.TextBox txt_desc;
         private System.Windows.Forms.ComboBox cmb_cat;
         private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtLink;
 
     }
 }

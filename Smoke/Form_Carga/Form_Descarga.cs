@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Form_Carga
 {
@@ -15,7 +16,8 @@ namespace Form_Carga
         Modelo.Usuarios Usuario;
         Controladora.C_Software C_Software;
         Vista.CVisual CVisual = new Vista.CVisual();
-        String nombre, desc, precio, id;
+        String nombre, desc, id;
+        decimal precio;
         string url = "25.146.125.242";
         public Form_Descarga(Modelo.Usuarios miusuario, Modelo.UsuarioSoftware micompra)
         {
@@ -31,6 +33,7 @@ namespace Form_Carga
             desc = Compra.Software.Descripcion;
             id = Compra.Software.Id.ToString();
             webBrowser1.Navigate(IPWEB + "/Smoke/product.php?Name=" + nombre + "&&" + "Price=" + precio + "&&" + "Desc=" + desc + "&&" + "&AppID=" + id + "&&" + "Comprado=1");
+            Process.Start("IExplore.exe", Compra.Software.Link);
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {

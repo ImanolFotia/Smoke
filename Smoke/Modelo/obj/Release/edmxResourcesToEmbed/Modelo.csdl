@@ -72,10 +72,12 @@
     <Property Type="Int32" Name="Edad" Nullable="false" />
     <Property Type="String" Name="Lenguaje" Nullable="false" />
     <Property Type="String" Name="Nombre" Nullable="false" />
-    <Property Type="String" Name="Precio" Nullable="false" />
+    <Property Type="Decimal" Name="Precio" Nullable="false" />
     <NavigationProperty Name="Usuario" Relationship="Model1.UsuariosSoftware" FromRole="Software" ToRole="Usuarios" />
     <NavigationProperty Name="UsuarioSoftwares" Relationship="Model1.SoftwareUsuarioSoftware" FromRole="Software" ToRole="UsuarioSoftware" />
     <NavigationProperty Name="AuditoriaSoftwares" Relationship="Model1.SoftwareAuditoriaSoftware" FromRole="Software" ToRole="AuditoriaSoftware" />
+    <Property Type="String" Name="Link" Nullable="false" />
+    <Property Type="Boolean" Name="Estado" Nullable="false" />
   </EntityType>
   <EntityType Name="Usuarios">
     <Key>
@@ -96,7 +98,7 @@
     <Property Name="usu_Admin" Nullable="false" Type="Boolean" />
     <NavigationProperty Name="AuditoriaLogins" Relationship="Model1.UsuariosAuditoriaLogin" FromRole="Usuarios" ToRole="AuditoriaLogin" />
     <Property Name="Credito" Nullable="false" Type="Decimal" DefaultValue="0" />
-    <Property Type="Int32" Name="Id2" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id2" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
   </EntityType>
   <EntityType Name="Pagos">
     <Key>
@@ -105,7 +107,8 @@
     <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="DateTime" Name="Fecha" annotation:StoreGeneratedPattern="None" Nullable="true" />
     <NavigationProperty Name="Usuario" Relationship="Model1.UsuariosPagos" FromRole="Pagos" ToRole="Usuarios" />
-    <Property Type="String" Name="Monto" Nullable="false" />
+    <Property Type="Decimal" Name="Monto" Nullable="false" />
+    <Property Type="Boolean" Name="Tipo" Nullable="false" />
   </EntityType>
   <Association Name="UsuariosSoftware">
     <End Type="Model1.Usuarios" Multiplicity="1" Role="Usuarios" />
@@ -239,7 +242,7 @@
     </Key>
     <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Decimal" Name="Monto" Nullable="false" />
-    <Property Type="String" Name="FechaModificacion" Nullable="false" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" />
     <Property Type="String" Name="IdUsuario" Nullable="false" />
   </EntityType>
 </Schema>

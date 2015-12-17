@@ -47,6 +47,15 @@ namespace Controladora
             oModelo.Usuarios.DeleteObject(Objeto);
             oModelo.SaveChanges();
         }
+
+        public decimal Obtener_PagoMensualMonto()
+        {
+
+            var UP = oModelo.PagoMensualMontoes
+           .OrderByDescending(p => p.Id)
+           .FirstOrDefault();
+            return UP.Monto;
+        }
       
         //Listados
         public List<Modelo.Software> Listar_Software()

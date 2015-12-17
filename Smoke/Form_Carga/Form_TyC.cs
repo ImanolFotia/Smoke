@@ -29,9 +29,10 @@ namespace Form_Carga
                 oSoftware.Categoria = "Shooter";
                 oSoftware.Descripcion = "Best game ever";
                 oSoftware.Edad = 12;
+                oSoftware.Link = "www.mediasmoke.com";
                 oSoftware.Lenguaje = "English";
                 oSoftware.Nombre = "Epsilon";
-                oSoftware.Precio = Convert.ToString(1245);
+                oSoftware.Precio = 1245;
                 oSoftware.Usuario = oUsuario;
                 C_Software.Agregar2(oSoftware);
 

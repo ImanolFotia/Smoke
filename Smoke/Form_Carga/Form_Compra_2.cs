@@ -17,7 +17,8 @@ namespace Form_Carga
         Modelo.Software oSoftware;
         Vista.CVisual CVisual = new Vista.CVisual();
         Modelo.Usuarios oUsuario;
-        String url, nombre, desc, precio, id;
+        String url, nombre, desc, id;
+        decimal precio;
         public Form_Compra_2(Modelo.Software fSoftware, Modelo.Usuarios oUSUARIO)
         {
             InitializeComponent();
@@ -84,6 +85,7 @@ namespace Form_Carga
             Compra.IdUsuario = oUsuario.Id;
             Compra.Software = oSoftware;
             Compra.Usuario = oUsuario;
+            oUsuario.Credito = oUsuario.Credito - Compra.Software.Precio;
             C_Software.Compra(Compra);
             btn_Comprar.Enabled = false;
             webBrowser1.Navigate("25.146.125.242/Smoke/product.php?Name=" + nombre + "&&" + "Price=" + precio  + "&&" + "&AppID=" + id + "&&" + "Comprado=1");

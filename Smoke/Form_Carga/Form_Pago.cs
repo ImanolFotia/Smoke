@@ -47,14 +47,28 @@ namespace Form_Carga
         {
             if (TipoPago == 0)//carga crédito
             {
-                oUsuario.Credito += Monto;
-                oModelo.Usuarios.ApplyCurrentValues(oUsuario);
-                oModelo.SaveChanges();
-                Decimal MontoActual;
-                MontoActual = oUsuario.Credito;//.GetValueOrDefault() porque es nullable, si no no deja convertirlo
-                MontoActual.ToString();
-                MessageBox.Show("Tu crédito ahora es de $" + MontoActual + "." + Environment.NewLine + "Muchas gracias por tu carga.");
-                this.DialogResult = DialogResult.OK;
+                try
+                {
+                    oUsuario.Credito += Monto;
+                    oModelo.Usuarios.ApplyCurrentValues(oUsuario);
+                    oModelo.SaveChanges();
+                    Modelo.Pagos oPago = new Modelo.Pagos();
+                    oPago.Usuario = (Modelo.Usuarios)oUsuario;
+                    oPago.Fecha = DateTime.Now;
+                    oPago.Tipo = true;
+                    oPago.Monto = Monto;
+                    oModelo.AddToPagos(oPago);
+                    Decimal MontoActual;
+                    MontoActual = oUsuario.Credito;//.GetValueOrDefault() porque es nullable, si no no deja convertirlo
+                    MontoActual.ToString();
+                    MessageBox.Show("Tu crédito ahora es de $" + MontoActual + "." + Environment.NewLine + "Muchas gracias por tu carga.");
+                    this.DialogResult = DialogResult.OK;
+                }
+                catch
+                {
+                    //MessageBox.Show("Tu crédito ahora es de $" + MontoActual + "." + Environment.NewLine + "Muchas gracias por tu carga.");
+                    this.DialogResult = DialogResult.OK;
+                }
             }
             if (TipoPago == 1)//pago mensual
             {
@@ -66,6 +80,7 @@ namespace Form_Carga
                     Modelo.Pagos oPago = new Modelo.Pagos();
                     oPago.Usuario = (Modelo.Usuarios)oUsuario;
                     oPago.Fecha = DateTime.Now;
+                    oPago.Monto = cUsuarios.Obtener_PagoMensualMonto();
                     cUsuarios.AgregarPago(oPago);
                     MessageBox.Show("Gracias por tu pago mensual." + Environment.NewLine + "Ya podés usar todos nuestros servicios");
                 }

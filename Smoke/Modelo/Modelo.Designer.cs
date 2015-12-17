@@ -1234,7 +1234,7 @@ namespace Modelo
         /// <param name="monto">Initial value of the Monto property.</param>
         /// <param name="fechaModificacion">Initial value of the FechaModificacion property.</param>
         /// <param name="idUsuario">Initial value of the IdUsuario property.</param>
-        public static PagoMensualMonto CreatePagoMensualMonto(global::System.Int32 id, global::System.Decimal monto, global::System.String fechaModificacion, global::System.String idUsuario)
+        public static PagoMensualMonto CreatePagoMensualMonto(global::System.Int32 id, global::System.Decimal monto, global::System.DateTime fechaModificacion, global::System.String idUsuario)
         {
             PagoMensualMonto pagoMensualMonto = new PagoMensualMonto();
             pagoMensualMonto.Id = id;
@@ -1304,7 +1304,7 @@ namespace Modelo
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String FechaModificacion
+        public global::System.DateTime FechaModificacion
         {
             get
             {
@@ -1314,13 +1314,13 @@ namespace Modelo
             {
                 OnFechaModificacionChanging(value);
                 ReportPropertyChanging("FechaModificacion");
-                _FechaModificacion = StructuralObject.SetValidValue(value, false);
+                _FechaModificacion = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("FechaModificacion");
                 OnFechaModificacionChanged();
             }
         }
-        private global::System.String _FechaModificacion;
-        partial void OnFechaModificacionChanging(global::System.String value);
+        private global::System.DateTime _FechaModificacion;
+        partial void OnFechaModificacionChanging(global::System.DateTime value);
         partial void OnFechaModificacionChanged();
     
         /// <summary>
@@ -1367,11 +1367,13 @@ namespace Modelo
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="monto">Initial value of the Monto property.</param>
-        public static Pagos CreatePagos(global::System.Int32 id, global::System.String monto)
+        /// <param name="tipo">Initial value of the Tipo property.</param>
+        public static Pagos CreatePagos(global::System.Int32 id, global::System.Decimal monto, global::System.Boolean tipo)
         {
             Pagos pagos = new Pagos();
             pagos.Id = id;
             pagos.Monto = monto;
+            pagos.Tipo = tipo;
             return pagos;
         }
 
@@ -1435,7 +1437,7 @@ namespace Modelo
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Monto
+        public global::System.Decimal Monto
         {
             get
             {
@@ -1445,14 +1447,38 @@ namespace Modelo
             {
                 OnMontoChanging(value);
                 ReportPropertyChanging("Monto");
-                _Monto = StructuralObject.SetValidValue(value, false);
+                _Monto = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Monto");
                 OnMontoChanged();
             }
         }
-        private global::System.String _Monto;
-        partial void OnMontoChanging(global::System.String value);
+        private global::System.Decimal _Monto;
+        partial void OnMontoChanging(global::System.Decimal value);
         partial void OnMontoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Boolean Tipo
+        {
+            get
+            {
+                return _Tipo;
+            }
+            set
+            {
+                OnTipoChanging(value);
+                ReportPropertyChanging("Tipo");
+                _Tipo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Tipo");
+                OnTipoChanged();
+            }
+        }
+        private global::System.Boolean _Tipo;
+        partial void OnTipoChanging(global::System.Boolean value);
+        partial void OnTipoChanged();
 
         #endregion
 
@@ -1813,7 +1839,7 @@ namespace Modelo
         /// <param name="precio">Initial value of the Precio property.</param>
         /// <param name="link">Initial value of the Link property.</param>
         /// <param name="estado">Initial value of the Estado property.</param>
-        public static Software CreateSoftware(global::System.Int32 id, global::System.String categoria, global::System.String descripcion, global::System.Int32 edad, global::System.String lenguaje, global::System.String nombre, global::System.String precio, global::System.String link, global::System.Boolean estado)
+        public static Software CreateSoftware(global::System.Int32 id, global::System.String categoria, global::System.String descripcion, global::System.Int32 edad, global::System.String lenguaje, global::System.String nombre, global::System.Decimal precio, global::System.String link, global::System.Boolean estado)
         {
             Software software = new Software();
             software.Id = id;
@@ -1984,7 +2010,7 @@ namespace Modelo
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Precio
+        public global::System.Decimal Precio
         {
             get
             {
@@ -1994,13 +2020,13 @@ namespace Modelo
             {
                 OnPrecioChanging(value);
                 ReportPropertyChanging("Precio");
-                _Precio = StructuralObject.SetValidValue(value, false);
+                _Precio = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Precio");
                 OnPrecioChanged();
             }
         }
-        private global::System.String _Precio;
-        partial void OnPrecioChanging(global::System.String value);
+        private global::System.Decimal _Precio;
+        partial void OnPrecioChanging(global::System.Decimal value);
         partial void OnPrecioChanged();
     
         /// <summary>

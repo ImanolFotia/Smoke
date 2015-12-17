@@ -23,12 +23,7 @@ namespace CONTROLADORA
 
             if (oModelo.moduloes.ToList().Count == 0)
             {
-                if (oModelo.PagoMensualMontoes.ToList().Count == 0)
-                {
-                    Modelo.PagoMensualMonto oPMM = new Modelo.PagoMensualMonto();
-                    oPMM.Monto = 150;
-                    oModelo.AddToPagoMensualMontoes(oPMM);
-                }
+
                 Modelo.modulo oMODULO = new Modelo.modulo();
                 oMODULO.mod_codigo = "SEG";
                 oMODULO.mod_descripcion = "SEGURIDAD";
@@ -177,6 +172,15 @@ namespace CONTROLADORA
                 oPERFIL.permiso.Add(permisoM);
                 oModelo.AddToperfils(oPERFIL);
                 oPERFIL = null;
+
+                if (oModelo.PagoMensualMontoes.ToList().Count == 0)
+                {
+                    Modelo.PagoMensualMonto oPMM = new Modelo.PagoMensualMonto();
+                    oPMM.Monto = 150;
+                    oPMM.FechaModificacion = DateTime.Now;
+                    oPMM.IdUsuario = oUSUARIO.Id;
+                    oModelo.AddToPagoMensualMontoes(oPMM);
+                }
 
                 oModelo.SaveChanges();
             }

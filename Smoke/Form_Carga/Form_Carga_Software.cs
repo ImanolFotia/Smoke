@@ -83,12 +83,14 @@ namespace Form_Carga
             Software.Categoria = cmb_cat.SelectedItem.ToString();
             Software.Edad = Convert.ToInt32(nup_edad.Value);
             Software.Lenguaje = cmb_leng.SelectedItem.ToString();
-            Software.Precio = txt_precio.Text;
+            Software.Precio = Convert.ToDecimal(txt_precio.Text);
+            Software.Link = txtLink.Text;
             Software.Usuario = Usuario;
             C_Software.Agregar2(Software);
             Modelo.AuditoriaSoftware oAuSoft = new Modelo.AuditoriaSoftware();
             oAuSoft.IdUsuario = Usuario.Id;
             oAuSoft.Fecha_Accion = DateTime.Now;
+            oAuSoft.Accion = "Subir";
             //aplicación del patrón de diseño prototype
             //se clona el objeto Software, ya instanciado, en el objeto Auditoria (oAuSoft)
             oAuSoft.Software = Software;
