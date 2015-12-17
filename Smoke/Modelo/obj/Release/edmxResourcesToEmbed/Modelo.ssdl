@@ -88,6 +88,8 @@
     <Property Name="Lenguaje" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Precio" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Link" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Estado" Type="bit" Nullable="false" />
     <Property Name="Usuario_Id2" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Usuarios">
