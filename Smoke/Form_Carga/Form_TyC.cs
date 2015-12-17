@@ -14,6 +14,7 @@ namespace Form_Carga
         Controladora.C_Software C_Software = Controladora.C_Software.Obtener_Instancia();
         Modelo.Usuarios oUsuario;
         Modelo.Software oSoftware;
+        Modelo.Software oSoftwareModificar;
         Vista.CVisual CVisual = new Vista.CVisual();
         public Form_TyC(Modelo.Usuarios FormUsuario)
         {
@@ -111,7 +112,11 @@ namespace Form_Carga
 
         private void dgv_Software_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            oSoftwareModificar = (Modelo.Software)dgv_Software.CurrentRow.DataBoundItem;
+            Form_Modificar_Software form = new Form_Modificar_Software(oUsuario, oSoftwareModificar);
+            DialogResult dr = form.ShowDialog();
+            this.Hide();
+            if (dr == DialogResult.OK) this.Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

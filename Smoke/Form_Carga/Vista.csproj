@@ -76,11 +76,23 @@
     <Compile Include="Form_Auditoria_Login.Designer.cs">
       <DependentUpon>Form_Auditoria_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Auditoria_Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Auditoria_Pagos.Designer.cs">
+      <DependentUpon>Form_Auditoria_Pagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Auditoria_Software.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Auditoria_Software.Designer.cs">
       <DependentUpon>Form_Auditoria_Software.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Auditoria_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Auditoria_Usuarios.Designer.cs">
+      <DependentUpon>Form_Auditoria_Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Compras.cs">
       <SubType>Form</SubType>
@@ -123,6 +135,12 @@
     </Compile>
     <Compile Include="Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Modificar_Software.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Modificar_Software.Designer.cs">
+      <DependentUpon>Form_Modificar_Software.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Password.cs">
       <SubType>Form</SubType>
@@ -184,8 +202,14 @@
     <EmbeddedResource Include="Form_Auditoria_Login.resx">
       <DependentUpon>Form_Auditoria_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Auditoria_Pagos.resx">
+      <DependentUpon>Form_Auditoria_Pagos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Auditoria_Software.resx">
       <DependentUpon>Form_Auditoria_Software.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Auditoria_Usuarios.resx">
+      <DependentUpon>Form_Auditoria_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Compras.resx">
       <DependentUpon>Form_Compras.cs</DependentUpon>
@@ -210,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Modificar_Software.resx">
+      <DependentUpon>Form_Modificar_Software.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Pago.resx">
       <DependentUpon>Form_Pago.cs</DependentUpon>

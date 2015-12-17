@@ -69,10 +69,24 @@ namespace Form_Carga
             formtyc.Show();
             this.Close();
         }
+
         private void chk_Aceptar_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk_Aceptar.Checked == true) btn_Siguiente.Enabled = true;
-            if (chk_Aceptar.Checked == false) btn_Siguiente.Enabled = false;
+            decimal parsedValue;
+            if (decimal.TryParse(txt_precio.Text, out parsedValue) && !string.IsNullOrWhiteSpace(txt_desc.Text) && !string.IsNullOrWhiteSpace(txt_nombre.Text) && !string.IsNullOrWhiteSpace(txtLink.Text) && !string.IsNullOrWhiteSpace(txt_precio.Text))
+            {
+                if (chk_Aceptar.Checked == true) btn_Siguiente.Enabled = true;
+                if (chk_Aceptar.Checked == false) btn_Siguiente.Enabled = false;
+            }
+            else
+            {
+                if (chk_Aceptar.Checked == true)
+                {
+                    MessageBox.Show("Campos ingresados incorrectos");
+                    chk_Aceptar.Checked = false;
+                    return;
+                }
+            }
         }
      
         private void btn_Siguiente_Click(object sender, EventArgs e)
@@ -90,12 +104,16 @@ namespace Form_Carga
             Modelo.AuditoriaSoftware oAuSoft = new Modelo.AuditoriaSoftware();
             oAuSoft.IdUsuario = Usuario.Id;
             oAuSoft.Fecha_Accion = DateTime.Now;
-            oAuSoft.Accion = "Subir";
+            oAuSoft.Accion = "Subir" + Environment.NewLine + "ID: " + Software.Id;
             //aplicación del patrón de diseño prototype
             //se clona el objeto Software, ya instanciado, en el objeto Auditoria (oAuSoft)
             oAuSoft.Software = Software;
             C_Software.AgregarAuditoriaSoftware(oAuSoft);
             Armar_Lista();
+            MessageBox.Show("Carga de software exitosa.");
+            formtyc = new Form_TyC(Usuario);
+            formtyc.Show();
+            this.Close();
         }
         private void cmb_Usuario_SelectedIndexChanged(object sender, EventArgs e)
         {

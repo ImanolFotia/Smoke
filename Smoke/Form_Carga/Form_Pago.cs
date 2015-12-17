@@ -82,11 +82,13 @@ namespace Form_Carga
                     oPago.Fecha = DateTime.Now;
                     oPago.Monto = cUsuarios.Obtener_PagoMensualMonto();
                     cUsuarios.AgregarPago(oPago);
-                    MessageBox.Show("Gracias por tu pago mensual." + Environment.NewLine + "Ya podés usar todos nuestros servicios");
+                    MessageBox.Show("Gracias por tu pago mensual." + Environment.NewLine + "Ya podés usar todos nuestros servicios." + Environment.NewLine + "La aplicación se reiniciará");
+                    Application.Restart();
                 }
                 catch {
 
-                    MessageBox.Show("Gracias por tu pago mensual." + Environment.NewLine + "Ya podés usar todos nuestros servicios");
+                    MessageBox.Show("Gracias por tu pago mensual." + Environment.NewLine + "Ya podés usar todos nuestros servicios." + Environment.NewLine + "La aplicación se reiniciará");
+                    Application.Restart();
                     this.DialogResult = DialogResult.OK;
                 }
             }
@@ -99,7 +101,8 @@ namespace Form_Carga
                 oPago.Usuario = (Modelo.Usuarios)oUsuario;
                 oPago.Fecha = DateTime.Now;
                 cUsuarios.AgregarPago(oPago);
-                MessageBox.Show("Gracias por tu pago mensual." + Environment.NewLine + "Ya podés usar todos nuestros servicios");
+                MessageBox.Show("Gracias por tu pago mensual." + Environment.NewLine + "Ya podés usar todos nuestros servicios." + Environment.NewLine + "La aplicación se reiniciará");
+                Application.Restart();
             }
         }    
     }

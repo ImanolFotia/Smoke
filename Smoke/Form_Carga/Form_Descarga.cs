@@ -32,7 +32,7 @@ namespace Form_Carga
             precio = Compra.Software.Precio;
             desc = Compra.Software.Descripcion;
             id = Compra.Software.Id.ToString();
-            webBrowser1.Navigate(IPWEB + "/Smoke/product.php?Name=" + nombre + "&&" + "Price=" + precio + "&&" + "Desc=" + desc + "&&" + "&AppID=" + id + "&&" + "Comprado=1");
+            webBrowser1.Navigate("localhost/TD/Smoke/product.php?Name=" + nombre + "&&" + "Price=" + precio + "&&" + "&AppID=" + id + "&&" + "Comprado=1" + "&&" + "&Desc=" + Compra.Software.Descripcion + "&&" + "&Link=" + Compra.Software.Link);
             Process.Start("IExplore.exe", Compra.Software.Link);
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

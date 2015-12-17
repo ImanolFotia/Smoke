@@ -17,7 +17,7 @@ namespace Form_Carga
             InitializeComponent();
             this.FormClosing += Form1_FormClosing;
             String IPWEB = CVisual.LeerIPWEB();
-            webBrowser1.Navigate(IPWEB);
+            webBrowser1.Navigate("localhost/TD/login.php");
 
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

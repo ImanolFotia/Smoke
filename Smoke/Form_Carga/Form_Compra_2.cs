@@ -33,10 +33,22 @@ namespace Form_Carga
             precio = oSoftware.Precio;
             desc = oSoftware.Descripcion;
             id = oSoftware.Id.ToString();
-            url = IPWEB + "/Smoke/product.php?Name=" + nombre + "&&" + "Price=" + precio + "&&" + "&&" + "&AppID=" + id;
-            label2.Text = url;
+            string url = "localhost/TD/Smoke/product.php?Name=" + nombre + "&&" + "Price=" + precio + "&&" + "&AppID=" + id + "&&" + "Comprado=0" + "&&" + "&Desc=" + oSoftware.Descripcion;
             webBrowser1.Navigate(url);
+            List<Modelo.UsuarioSoftware> us = C_Software.Listar_Compras();
+
             btn_Comprar.Enabled = true;
+            for (int i = 0; i < us.Count; i++)
+            {
+                if (us.ElementAt(i).IdUsuario == oUsuario.Id && us.ElementAt(i).IdSoftware == oSoftware.Id)
+                {
+                    webBrowser1.Navigate("localhost/TD/Smoke/product.php?Name=" + nombre + "&&" + "Price=" + precio + "&&" + "&AppID=" + id + "&&" + "Comprado=1" + "&&" + "&Desc=" + oSoftware.Descripcion + "&&" + "&Link=" + oSoftware.Link);
+                    btn_Comprar.Enabled = false;
+                }
+
+            }
+            label2.Text = url;
+            
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -74,11 +86,27 @@ namespace Form_Carga
 
         private void btn_Comprar_Click(object sender, EventArgs e)
         {
-            List<Modelo.UsuarioSoftware> listadoXObjeto = new List<Modelo.UsuarioSoftware>();
-            if (listadoXObjeto.Any(x => x.Software.Id == oSoftware.Id) && listadoXObjeto.Any(x => x.Usuario.Id == oUsuario.Id))
+            List<Modelo.UsuarioSoftware> us = C_Software.Listar_Compras();
+            for (int i = 0; i < us.Count ; i++ )
             {
-                MessageBox.Show("Usted ya posee este software.");
+                if (us.ElementAt(i).IdUsuario == oUsuario.Id && us.ElementAt(i).IdSoftware == oSoftware.Id)
+                {
+                    MessageBox.Show("Ya tenés este software.");
+                    webBrowser1.Navigate("localhost/TD/Smoke/product.php?Name=" + nombre + "&&" + "Price=" + precio + "&&" + "&AppID=" + id + "&&" + "Comprado=1" + "&&" + "&Desc=" + oSoftware.Descripcion + "&&" + "&Link=" + oSoftware.Link);
+                    return;
+                }
+            }
+
+            if (oUsuario.Credito - precio < 0)
+            {
+                MessageBox.Show("Tu crédito es insuficiente");
                 return;
+            }
+            //Patron de diseño State:
+            //modifica el comportamiento de la clase dependiendo del estado del objeto
+            if (oSoftware.Estado == true)
+            {
+                MessageBox.Show("El software que estás intentando comprar no está disponible en este momento.");
             }
             Compra = new Modelo.UsuarioSoftware();
             Compra.IdSoftware = oSoftware.Id;
@@ -88,7 +116,7 @@ namespace Form_Carga
             oUsuario.Credito = oUsuario.Credito - Compra.Software.Precio;
             C_Software.Compra(Compra);
             btn_Comprar.Enabled = false;
-            webBrowser1.Navigate("25.146.125.242/Smoke/product.php?Name=" + nombre + "&&" + "Price=" + precio  + "&&" + "&AppID=" + id + "&&" + "Comprado=1");
+            webBrowser1.Navigate("localhost/TD/Smoke/product.php?Name=" + nombre + "&&" + "Price=" + precio + "&&" + "&AppID=" + id + "&&" + "Comprado=1" + "&&" + "&Desc=" + oSoftware.Descripcion + "&&" + "&Link=" + oSoftware.Link);
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)

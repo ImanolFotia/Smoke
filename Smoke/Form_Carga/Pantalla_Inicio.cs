@@ -90,7 +90,7 @@ namespace Form_Carga
 
             String IPWEB = CVisual.LeerIPWEB();
             string url = IPWEB + "/Smoke/smoke.php";
-            webBrowser1.Navigate(url);
+            webBrowser1.Navigate("localhost/TD/Smoke/smoke.php");
             Form_Login formLOGIN = new Form_Login();
             DialogResult drLOGIN = formLOGIN.ShowDialog();
 
@@ -328,6 +328,22 @@ namespace Form_Carga
             if (dr == DialogResult.OK) this.Show();
         }
 
+        private void pagoMensualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Auditoria_Pagos form = new Form_Auditoria_Pagos();
+            DialogResult dr = form.ShowDialog();
+            this.Hide();
+            if (dr == DialogResult.OK) this.Show();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Auditoria_Usuarios form = new Form_Auditoria_Usuarios();
+            DialogResult dr = form.ShowDialog();
+            this.Hide();
+            if (dr == DialogResult.OK) this.Show();
+        }
+
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_Auditoria_Login form = new Form_Auditoria_Login();
@@ -445,6 +461,18 @@ namespace Form_Carga
         {
             Application.Exit();
         }
+
+        private void gitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //System.Diagnostics.ProcessStartInfo proc = new System.Diagnostics.ProcessStartInfo();
+            //proc.FileName = @"C:\windows\system32\cmd.exe";
+            //proc.Arguments = "/c cd .. & cd .. & cd .. & cd .. && C:/Program Files/Git/cmd/git.exe add . && C:/Program Files/Git/cmd/git.exe commit -m 'backup' && C:/Program Files/Git/cmd/git.exe push Smoke master & pause";
+            //System.Diagnostics.Process.Start(proc);
+        }
+
+
+
+
 
     }
 }

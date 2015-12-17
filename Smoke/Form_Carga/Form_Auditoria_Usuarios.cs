@@ -9,20 +9,15 @@ using System.Windows.Forms;
 
 namespace Form_Carga
 {
-    public partial class Form_Auditoria_Software : Form
+    public partial class Form_Auditoria_Usuarios : Form
     {
-        Controladora.C_Software C_Software;
-        public Form_Auditoria_Software()
+        Controladora.C_Usuarios C_Usuarios;
+        public Form_Auditoria_Usuarios()
         {
             InitializeComponent();
             this.FormClosing += Form1_FormClosing;
-            C_Software = Controladora.C_Software.Obtener_Instancia();
+            C_Usuarios = Controladora.C_Usuarios.Obtener_Instancia();
             Armar_Lista();
-        }
-
-        private void Form_Auditoria_Software_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -34,7 +29,7 @@ namespace Form_Carga
         {
             dataGridView1.DataSource = null;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.DataSource = C_Software.ObtenerAuditoriaSoftware();
+            dataGridView1.DataSource = C_Usuarios.Listar_Usuarios();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

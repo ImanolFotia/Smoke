@@ -86,5 +86,14 @@ namespace Controladora
             //Modelo.Pagos OP = oModelo.Pagos.Where(u => u.Usuario.Id == UID);
             //return OP;
         }
+
+
+        /* Pagos mensuales
+ * Se registra quien subio el software junto con la fecha en el momento de hacerlo
+ * */
+        public List<Modelo.PagoMensualMonto> ObtenerAuditoriaPagoMensualMonto()
+        {
+            return oModelo.PagoMensualMontoes.ToList();
+        }
     }
 }

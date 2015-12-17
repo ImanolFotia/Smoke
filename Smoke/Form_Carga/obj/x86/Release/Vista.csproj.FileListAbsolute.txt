@@ -263,3 +263,6 @@ C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Form_Carga\obj\x86\Releas
 C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Pantalla_Inicio.resources
 C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Properties.Resources.resources
 C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Vista.csproj.GenerateResource.Cache
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Auditoria_Pagos.resources
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Auditoria_Usuarios.resources
+C:\Users\EmilianoAgustin\Documents\Project Smoke\Smoke\Form_Carga\obj\x86\Release\Form_Carga.Form_Modificar_Software.resources
