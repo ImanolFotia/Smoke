@@ -86,8 +86,9 @@ namespace Form_Carga
 
         private void btn_Comprar_Click(object sender, EventArgs e)
         {
+            //Se verifica que el usuario no posea el software
             List<Modelo.UsuarioSoftware> us = C_Software.Listar_Compras();
-            for (int i = 0; i < us.Count ; i++ )
+            for (int i = 0; i < us.Count; i++)
             {
                 if (us.ElementAt(i).IdUsuario == oUsuario.Id && us.ElementAt(i).IdSoftware == oSoftware.Id)
                 {
@@ -96,7 +97,7 @@ namespace Form_Carga
                     return;
                 }
             }
-
+            //se verifica que el usuario posea el credito suficiente para poder comprar
             if (oUsuario.Credito - precio < 0)
             {
                 MessageBox.Show("Tu crédito es insuficiente");
@@ -108,14 +109,17 @@ namespace Form_Carga
             {
                 MessageBox.Show("El software que estás intentando comprar no está disponible en este momento.");
             }
+            //se llenan los campos del objeto compra con los datos de usuario y software
             Compra = new Modelo.UsuarioSoftware();
             Compra.IdSoftware = oSoftware.Id;
             Compra.IdUsuario = oUsuario.Id;
             Compra.Software = oSoftware;
             Compra.Usuario = oUsuario;
             oUsuario.Credito = oUsuario.Credito - Compra.Software.Precio;
+            //se asienta en la base datos el objeto compra
             C_Software.Compra(Compra);
             btn_Comprar.Enabled = false;
+            //Se muestra al usuario el link de descarga de su producto
             webBrowser1.Navigate("localhost/TD/Smoke/product.php?Name=" + nombre + "&&" + "Price=" + precio + "&&" + "&AppID=" + id + "&&" + "Comprado=1" + "&&" + "&Desc=" + oSoftware.Descripcion + "&&" + "&Link=" + oSoftware.Link);
         }
 

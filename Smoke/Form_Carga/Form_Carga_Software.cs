@@ -93,7 +93,9 @@ namespace Form_Carga
      
         private void btn_Siguiente_Click(object sender, EventArgs e)
         {
+            //Se crea una nueva instancia de Software
             Software = new Modelo.Software();
+            //Se llenan los campos con los datos ingresados desde la interfaz
             Software.Nombre = txt_nombre.Text;
             Software.Descripcion = txt_desc.Text;
             Software.Categoria = cmb_cat.SelectedItem.ToString();
@@ -102,8 +104,11 @@ namespace Form_Carga
             Software.Precio = Convert.ToDecimal(txt_precio.Text);
             Software.Link = txtLink.Text;
             Software.Usuario = Usuario;
+            //Se agrega el nuevo software a la base de datos
             C_Software.Agregar2(Software);
+            //Se instancia un nuevo objeto auditoria
             Modelo.AuditoriaSoftware oAuSoft = new Modelo.AuditoriaSoftware();
+            //Se llenan los campos con los datos ingresados desde la interfaz
             oAuSoft.IdUsuario = Usuario.Id;
             oAuSoft.Fecha_Accion = DateTime.Now;
             oAuSoft.Accion = "Subir" + Environment.NewLine +
@@ -119,6 +124,7 @@ namespace Form_Carga
             //se clona el objeto Software, ya instanciado, en el objeto Auditoria (oAuSoft)
             oAuSoft.Software = Software;
             C_Software.AgregarAuditoriaSoftware(oAuSoft);
+            //Se rearma la lista de softwares
             Armar_Lista();
             MessageBox.Show("Carga de software exitosa.");
             formtyc = new Form_TyC(Usuario);
